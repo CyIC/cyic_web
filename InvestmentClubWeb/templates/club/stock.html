@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{%  block content %}
+{%  if latest_stock_list %}
+    <ul>
+        {% for symbol in latest_stock_list %}
+        <li><a href="/polls/{{  symbol }}">{{ symbol }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No Stocks Found.</p>
+{% endif %}
+{% endblock %}
