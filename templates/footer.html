@@ -1,7 +1,23 @@
-<div id="footer">
-    <nav class="bottom-bar" data-bottombar role="info">
-         <ul class="footer-area">
-             Connect with Us
+<div class="bottom-bar full-width">
+    {% load static %}
+    <div class="bottom-bar-left">
+         <ul>
+             <li>
+                 Connect with Us
+             </li>
+             <li>
+                 <img src="{% static 'img/facebook-logo.svg' %}"> <img src="{% static 'img/youtube-play-button.svg' %}"> <img src="{% static 'img/twitter-letter-logo.svg' %}">
+             </li>
          </ul>
-    </nav>
+    </div>
+    <div class="bottom-bar-right">
+        <!-- Right Nav section -->
+        <ul class="menu">
+            <li class="disclaimer">
+                <h5>Disclaimer</h5>
+                <p>Cypress Investment Club (CyIC) is not a collective investment scheme. CyIC does not provide, or claim to provide, fund management services. CyIC has not paid any party a fee in exchange for services other than the fees charged by the online trading platforms; CyIC does not provide, or claim to provide, corporate finance or brokerage services. CyIC does not provide, or claim to provide, investment advice. CyIC Members conduct their own research and collectively decide on investments subject to the terms and procedures described in the Partnership Agreement. This material has been distributed for informational and educational purposes only and should not be considered as investment advice or a recommendation of any particular security, strategy or investment product. No part of this material may be reproduced in any form, or referred to in any other publication, without express written permission.</p>
+                <div>Icons made by <a href="https://www.flaticon.com/authors/simpleicon" title="Twitter letter logo">Twitter letter logo</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"     title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            </li>
+        </ul>
+    </div>
 </div>

@@ -1,0 +1,16 @@
+[
+  {
+    "model": "InvestmentClubWeb.ledger",
+    "pk": 1,
+    "fields": {
+      "name": "cash"
+    }
+  },
+  {
+    "model": "InvestmentClubWeb.ledger",
+    "pk": 2,
+    "fields": {
+      "name": "trade expense"
+    }
+  }
+]

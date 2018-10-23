@@ -1,12 +1,5 @@
 [
   {
-    "model": "InvestmentClubWeb.ledger",
-    "pk": 1,
-    "fields": {
-      "name": "cash"
-    }
-  },
-  {
     "model": "auth.user",
      "pk": 1,
      "fields": {

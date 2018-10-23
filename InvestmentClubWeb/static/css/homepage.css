@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.disclaimer {
+  font-size: 10px !important;
+  padding-right: 10%;
+  margin-right: 70px;
+  text-align: justify;
+}
+.full-width {
+   width: 100%;
+   max-width: initial;
+}

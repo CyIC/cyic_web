@@ -1,31 +1,33 @@
-<div id="navbar">
-    <nav class="top-bar" data-topbar role="navigation">
-         <ul class="title-area">
-             <li class="name">
-                 <h1 id="home"><a href="index.html">
-                     {% load static %}
-                     <img class="logo" alt="Cypress Investment Club" src="{% static 'img/biglogo.png' %}" width="100px" />
-                 <!-- Cypress Investment Club --></a></h1>
+<div class="top-bar">
+    <div class="top-bar-left">
+         <ul class="menu" data-dropdown-menu>
+             <li>
+                 {% load static %}
+                 <img class="logo" alt="Cypress Investment Club" src="{% static 'img/biglogo.png' %}" width="100px" />
+                 <!-- Cypress Investment Club -->
+             </li>
+             <li>
+                 <a href="#">Who We Are</a>
+             </li>
+             <li>
+                 <a href="teampage">Team</a>
+             </li>
+             <li>
+                 <a href="stocks">Stocks</a>
              </li>
          </ul>
-        <section class="top-bar-section">
-            <!-- Right Nav section -->
-            <ul class="dropdown menu" data-dropdown-menu>
-                <li>
-                    <a>Who We Are</a>
-                    <ul class="menu">
-                        <li><a href="about.html#mission">Our Mission</a></li>
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <a href="teampage.html">Team</a>
-                    <ul class="dropdown">
-                        <li><a href="teampage.html#execs">Executive Board</a>
-                        </li>
-                    </ul>
-                </li>
-
-            </ul>
-        </section>
-    </nav>
+    </div>
+    <div class="top-bar-right">
+        <!-- Right Nav section -->
+        <ul class="menu">
+            <li>
+            {% if user.is_authenticated %}
+                <li><a href="dues">Dues</a></li>
+                <li><a href="{% url 'logout' %}">logout</a></li>
+                {% else %}
+                <a href="{% url 'login' %}">login</a>
+                {% endif %}
+            </li>
+        </ul>
+    </div>
 </div>

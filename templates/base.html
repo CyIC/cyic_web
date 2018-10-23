@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CyIC</title>
     {% load static %}
     <link rel="shortcut icon" href="{% static  'img/favicon.ico' %}" type="image/icon" />
-    <link rel="stylesheet" href="{% static 'css/foundation.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -14,10 +14,8 @@
 {%  block content %}
 {%  endblock %}
 {% include "footer.html" %}
-{% load static %}
 <script src="{% static "js/vendor/jquery.js" %}"></script>
-<!-- <script src="js/vendor/what-input.js"></script> -->
-<script src="{% static  "js/vendor/foundation.js" %}"></script>
+<script src="{% static "js/vendor/foundation.js" %}"></script>
 <script src="{% static "js/app.js" %}"></script>
 </body>
 </html>

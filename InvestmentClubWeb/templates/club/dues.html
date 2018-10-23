@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Paid in since 1/1/2018</th>
+            <th>Total Paid in</th>
+            <th>Paid in plus earnings</th>
+            <th>Units since 1/1/2018</th>
+            <th>Total Units</th>
+            <th>Market Value</th>
+            <th>% Ownership</th>
+            <th>Est. $ to 25%</th>
+            <th>Units till 25%</th>
+            <th>% Market Value</th>
+        </tr>
+    {% if members_list %}
+        {% for user in members_list %}
+            <tr>
+                <td>{{ user.user.first_name }}</td>
+                <td>Paid in since 1/1/2018</td>
+                <td>Total Paid in</td>
+                <td>Paid in plus earnings</td>
+                <td>Units since 1/1/2018</td>
+                <td>Total Units</td>
+                <td>Market Value</td>
+                <td>% Ownership</td>
+                <td>Est. $ to 25%</td>
+                <td>Units till 25%</td>
+                <td>% Market Value</td>
+            </tr>
+        {% endfor %}
+    {%  else %}
+        <tr>
+            <td>No Users Active</td>
+        </tr>
+    {% endif %}
+    </table>
+{% endblock %}

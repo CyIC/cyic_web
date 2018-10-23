@@ -1,4 +1,7 @@
 .idea
+InvestmentClubWeb/migrations
+InvestmentClubWeb/__pycache__/
+ICWeb/__pycache__/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
