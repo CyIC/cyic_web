@@ -138,6 +138,37 @@ class ProfileTestCase(TestCase):
         self.assertEqual(profile.user.email, email)
         self.assertEqual(profile.units, 0)
 
+    def test_paid_in_dues(self):
+        first_name = rand_string(10)
+        last_name = rand_string(10)
+        username = rand_string(10)
+        email = '{}@{}.com'.format(rand_string(10), rand_string(7))
+        user = User.objects.create(first_name=first_name,
+                                   last_name=last_name,
+                                   username=username,
+                                   email=email)
+        self.assertEqual(user.first_name, first_name)
+        self.assertEqual(user.last_name, last_name)
+        self.assertEqual(user.username, username)
+        self.assertEqual(user.email, email)
+        profile = models.Profile.objects.get(user=user)
+        self.assertEqual(profile.user.first_name, first_name)
+        self.assertEqual(profile.user.last_name, last_name)
+        self.assertEqual(profile.user.username, username)
+        self.assertEqual(profile.user.email, email)
+        self.assertEqual(profile.units, 0)
+        cash_ledger = models.Ledger.objects.get(name=
+                                                "cash")
+        user_ledger = models.Ledger.objects.get(name=user.username)
+        rand_asset = models.JournalEntry.objects.create(notes='Dues for {}'.format(datetime.date.today()),
+                                                        debit_ledger=cash_ledger,
+                                                        debit_amount=10.00,
+                                                        credit_ledger=user_ledger,
+                                                        credit_amount=10.00)
+
+
+
+
 
 # class DuesTestCase(TestCase):
 #     fixtures = ['ledgers.json', 'users.json']
@@ -167,11 +198,13 @@ class JournalTestCase(TestCase):
         self.assertEqual(rand_asset.shares, rand_shares)
         self.assertEqual(rand_asset.cost_per_share, rand_price)
         self.assertEqual(rand_asset.date_transaction, datetime.date.today())
-        journal = models.JournalEntry.objects.get(date=datetime.date.today())
-        self.assertEqual(rand_asset.stock.symbol, journal.debit_ledger.name)
-        self.assertEqual(rand_asset.shares * rand_asset.cost_per_share, journal.debit_amount)
+        stock_ledger = models.Ledger.objects.get(name=rand_stock.symbol)
+        journal = models.JournalEntry.objects.filter(debit_ledger=stock_ledger)
+        self.assertEqual(len(journal), 1)
+        self.assertEqual(rand_asset.stock.symbol, journal[0].debit_ledger.name)
+        self.assertEqual(rand_asset.shares * rand_asset.cost_per_share, journal[0].debit_amount)
 
-    def test_ref_journal_buy_stocks(self):
+    def test_ref_journal_sell_stocks(self):
         rand_stock = create_stock()
         rand_shares = rand_int(-1000, -3)
         rand_price = rand_float()
@@ -180,9 +213,21 @@ class JournalTestCase(TestCase):
         self.assertEqual(rand_asset.shares, rand_shares)
         self.assertEqual(rand_asset.cost_per_share, rand_price)
         self.assertEqual(rand_asset.date_transaction, datetime.date.today())
-        journal = models.JournalEntry.objects.get(date=datetime.date.today())
-        self.assertEqual(rand_asset.stock.symbol, journal.credit_ledger.name)
-        self.assertEqual(rand_asset.shares * rand_asset.cost_per_share, journal.credit_amount)
+        stock_ledger = models.Ledger.objects.get(name=rand_stock.symbol)
+        journal = models.JournalEntry.objects.filter(credit_ledger=stock_ledger)
+        self.assertEqual(len(journal), 1)
+        self.assertEqual(rand_asset.stock.symbol, journal[0].credit_ledger.name)
+        self.assertEqual(rand_asset.shares * rand_asset.cost_per_share, journal[0].credit_amount)
+
+    def test_ref_journal_not_stock_buy(self):
+        # TODO build
+        pass
+
+    def test_ref_journal_not_stock_sell(self):
+        # TODO build
+        pass
+
+
 
 
 
