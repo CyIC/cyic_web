@@ -50,9 +50,11 @@ class JournalEntry(models.Model):
     date = models.DateField('Date of Activity', default=datetime.date.today)
     notes = models.CharField(max_length=500, default='')
     debit_ledger = models.ForeignKey(Ledger, related_name="debit_ledger", on_delete=models.CASCADE)
-    debit_amount = models.IntegerField(default=0)
+    debit_amount = models.FloatField(default=0.0)
     credit_ledger = models.ForeignKey(Ledger, related_name="credit_ledger", on_delete=models.CASCADE)
-    credit_amount = models.IntegerField(default=0)
+    credit_amount = models.FloatField(default=0.0)
+    # TODO build logic into model to check where debit_amount === credit_amount
+    # TODO build logic to allow multiple credit, or debit line items in a single transaction Issue #1
 
 
 class Profile(models.Model):
@@ -61,10 +63,23 @@ class Profile(models.Model):
     units = models.FloatField('Number of Units Owned', default=0)
 
     def get_ytd_paid_in(self):
-        return 15
+        return 4
 
     def get_total_paid_in(self):
-        return 15
+        """
+        a function which will grab all transactions from the general ledger, and add all the debits together, and
+        subtract all the credits
+
+        :return: total sum of all transactions within general ledger
+        """
+        debit_results = JournalEntry.objects.filter(debit_ledger=self.user.username)
+        credit_results = JournalEntry.objects.filter(credit_ledger=self.user.username)
+        sum = 0
+        for x in debit_results:
+            sum += x.debit_amount
+        for x in credit_results:
+            sum -= x.credit_amount
+        return sum
 
     def get_paid_in_plus_earnings(self):
         return 12
