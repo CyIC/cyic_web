@@ -17,6 +17,7 @@ def create_user_profile(sender, instance, created, **kwargs):
     """
     if created:
         Profile.objects.create(user=instance, units=0)
+        Ledger.objects.create(name=instance)
 
 
 @receiver(post_save, sender=User)
