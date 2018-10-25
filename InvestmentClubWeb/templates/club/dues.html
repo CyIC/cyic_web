@@ -36,4 +36,13 @@
         </tr>
     {% endif %}
     </table>
+    <hr>
+    <form action="" method="post">
+        <label for="member_name"> Member Name: </label>
+        <input id="member_name" type="text" name="member_name" value="{{  current_name }}">
+        <label for="member_dues"> Amount: </label>
+        <input id="member_dues" type="text" name="member_dues">
+        <input type="submit" value="ok">
+
+    </form>
 {% endblock %}
