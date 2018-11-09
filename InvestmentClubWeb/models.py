@@ -28,6 +28,8 @@ class StockAsset(models.Model):
     date_transaction = models.DateField('Date of Transaction', default=datetime.date.today)
     shares = models.IntegerField('Number of Shares owned', default=0)
     cost_per_share = models.FloatField('Cost per Share', default=0.0)
+    _last_close_price = models.FloatField('Current Stock Price', default=0.0)
+    _date_of_last_close_price = models.DateField('Date of last close price', default=datetime.date.today)
 
     def __str__(self):
         return '{}.{}'.format(self.stock.symbol, self.date_transaction)
@@ -35,8 +37,36 @@ class StockAsset(models.Model):
     def get_stock(self):
         return self.stock.symbol
 
-    def get_shares(self):
-        return self.shares
+    def get_exchange(self):
+        return self.stock.market_exchange
+
+    def get_total_cost(self):
+        return self.cost_per_share * self.shares
+
+    def get_last_close_price(self):
+        # TODO build function to retrieve stock prices
+        return False
+
+    def get_market_value(self):
+        return self.current_price * self.shares
+
+    def get_percent_total_shares(self):
+        # TODO query for all stocks
+        return False
+
+    def get_percent_total_cost(self):
+        # TODO query for all stocks
+        return False
+
+    def get_percent_total_market_value(self):
+        # TODO query for all stocks
+        return False
+
+    def percent_total_club_assets(self):
+        # TODO query for all stocks
+        # TODO query all assets
+        return False
+
 
 
 class Ledger(models.Model):
