@@ -36,11 +36,4 @@
         </tr>
     {% endif %}
     </table>
-    <hr>
-    <form action="/dues" method="post">
-        {%  csrf_token %}
-        {{ form }}
-        <input type="submit" value="ok">
-
-    </form>
 {% endblock %}
