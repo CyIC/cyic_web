@@ -1,0 +1,96 @@
+---
+layout: page
+title: Partnership Agreement
+permalink: /misc/partnership_agreement
+---
+            
+This AGREEMENT of PARTNERSHIP, effective as of 9 February 2018, by and between the undersigned, to wit:
+
+<list of members>
+
+NOW, THEREFORE IT IS AGREED:
+
+1. Formation. The undersigned hereby form a General Partnership in accordance with and subject to the laws of the State of Texas.
+
+2. Name. The name of the partnership shall be Cypress Investment Club. 
+
+3. Term. The partnership shall begin on 9 February 2018 and shall continue in perpetuity until terminated as hereinafter provided.
+
+4. Purpose. The only purpose of the partnership is to invest the assets of the partnership solely in stocks, bonds and other securities ("securities") for the education and benefit of the partners.
+
+5. Meetings. Periodic meetings shall be held as determined by the partnership.
+
+6. Capital Contributions. The partners may make capital contributions to the partnership on the date of each periodic meeting in such amounts as the partnership shall determine, provided, however, that no partner's capital account or partner’s combined household accounts shall exceed twenty-five percent (25%) of the capital accounts of all partners.
+
+7. Value of the Partnership. The current value of the assets of the partnership, less the current value of the liabilities of the partnership, (hereinafter referred to as the "value of the partnership") shall be determined as of a regularly scheduled date and time ("valuation date") preceding the date of each periodic meeting determined by the Club.
+
+8. Capital Accounts. A capital account shall be maintained in the name of each partner. Any increase or decrease in the value of the partnership on any valuation date shall be credited or debited, respectively, to each partner's capital account on that date. Any other method of valuating each partner's capital account may be substituted for this method, provided the substituted method results in exactly the same valuation as previously provided herein. Each partner's contribution to, or capital withdrawal from, the partnership shall be credited, or debited, respectively, to that partner's capital account.
+
+9. Management. Each partner shall participate in the management and conduct of the affairs of the partnership in proportion to his capital account. Except as otherwise determined, all decisions shall be made by the partners whose capital accounts total a majority of the value of the capital accounts of all the partners.
+
+10. Sharing of Profits and Losses. Net profits and losses of the partnership shall inure to, and be borne by, the partners, in proportion to the value of each of their capital     accounts.
+
+11. Books of Account. Books of account of the transactions of the partnership shall be kept and at all times be available and open to inspection and examination by any partner.
+
+12. Annual Accounting. Each calendar year, a full and complete account of the condition of the partnership shall be made to the partners.
+
+13. Bank Account. The partnership may select a bank for the purpose of opening a bank account. Funds in the bank account shall be withdrawn by checks signed by any partner designated by the partnership.
+
+14. Broker Account. None of the partners of this partnership shall be a broker. However, the partnership may select a broker and enter into such agreements with the broker as required for the purchase or sale of securities. Securities owned by the partnership shall be registered in the partnership name unless another name shall be designated by the partnership.
+
+Any corporation or transfer agent called upon to transfer any securities to or from the name of the partnership shall be entitled to rely on instructions or assignments signed by any partner without inquiry as to the authority of the person(s) signing such instructions or assignments, or as to the validity of any transfer to or from the name of the partnership.
+
+At the time of a transfer of securities, the corporation or transfer agent is entitled to assume (1) that the partnership is still in existence and (2) that this Agreement is in full force and effect and has not been amended unless the corporation has received written notice to the contrary.
+
+15. No Compensation. No partner shall be compensated for services rendered to the partnership, except reimbursement for expenses.
+
+16. Additional Partners. Additional partners may be admitted upon the unanimous consent of the partners, so long as the number of partners does not exceed limits determined by the partnership.
+    a. Transfers to a Trust. A partner may, after giving written notice to the other partners, transfer his interest in the partnership to a revocable living trust of which he is the grantor and sole trustee.
+    
+    b. Removal of a Partner. Any partner may be removed by agreement of the partners whose capital accounts total a majority of the value of all partners' capital accounts. Written notice of a meeting where removal of a partner is to be considered shall include a specific reference to this matter. The removal shall become effective upon payment of the value of the removed partner's capital account, which shall be in accordance with the provisions on full withdrawal of a partner noted in paragraphs 18 and 20. The vote action shall be treated as receipt of request for withdrawal.
+
+17. Termination of Partnership. The partnership may be terminated by    agreement of the partners whose capital accounts total a majority in value of the capital accounts of all the partners. Written notice of a meeting where termination of the partnership is to be considered shall include a specific reference to this matter. The partnership shall terminate upon a majority vote of all partners' capital accounts. Notice of the decision to terminate the partnership shall be given to all the partners. Payment shall then be made of all the liabilities of the partnership and a final distribution of the remaining assets either in cash or in kind, shall promptly be made to the partners or their personal representatives in proportion to each partner's capital account. 
+
+18. Voluntary Withdrawal (Partial or Full) of a Partner. Any partner may withdraw a part or all of the value of his capital account in the partnership and the partnership shall continue as a taxable entity.
+
+The partner withdrawing a part or all of the value of his capital account shall give notice of such intention in writing to the Secretary. Written notice shall be deemed to be received as of the first meeting of the partnership at which it is presented. If written notice is received between meetings it will be treated as received at the first following meeting. Withdrawal may only take place after the first six months of a partner’s admission.
+
+In making payment, the value of the partnership as set forth in the valuation statement prepared for the first meeting following the meeting at which notice is received from a partner requesting a partial or full withdrawal, will be used to determine the value of the partner's account.
+
+The partnership shall pay the partner who is withdrawing a portion or all of the value of his capital account in the partnership in accordance with paragraph 20 of this Agreement.
+
+19. Death or Incapacity of a Partner. In the event of the death or incapacity of a partner (or the death or incapacity of the grantor and sole trustee of a revocable living trust, if such trust is partner pursuant to Paragraph 16A hereof), receipt of notice shall     be treated as a notice of full withdrawal.
+
+20. Terms of Payment. In the case of a partial withdrawal, payment may be made in cash or securities of the partnership or a mix of each at the option of the remaining partnership. In the case of a full withdrawal, payment may be made in cash or securities or a mix of each at the option of the remaining partners. In either case, where securities are to be distributed, the remaining partners select the securities.
+
+The partnership shall transfer to the partner (or other appropriate entity) withdrawing a portion or all of his interest in the partnership, an amount equal to the value of the capital account being withdrawn, less any actual expenses to the partnership related to the withdrawal. Payment may be made by transferring cash or securities or both. The value of securities transferred shall be as shown on the Club's valuation statement prepared to determine the value of that partner's capital account in the partnership and securities shall be transferred as of the date of that valuation statement (the "withdrawal valuation date"). The Club's broker shall be advised that ownership of the securities has been transferred to the partner as of the withdrawal valuation date. Cash shall be paid within 10 business days after the withdrawal valuation date.
+
+If the partner withdrawing a portion or all of the value of his capital account in the partnership desires an immediate payment in cash, the partnership at its earliest convenience may pay eighty percent (80%) of the estimated value of his capital account and settle the balance in accordance with the valuation and payment procedures set forth in paragraphs 18 and 20.
+
+21. Changes to this Agreement. Modifications and amendments to this agreement shall be enforceable only by agreement of partners whose capital accounts total a two-thirds majority in value of the capital accounts of all the partners.
+
+22. Forbidden Acts: No partner shall:
+    
+    a. Have the right or authority to bind or obligate the partnership to any extent whatsoever with regard to any matter outside the scope of the partnership purpose.
+   
+    b. Except as provided in paragraph 16A, without the unanimous consent of all the other partners, assign, transfer, pledge, mortgage or sell all or part of his interest in the partnership to any other partner or other person whomsoever, or enter into any agreement as the result of which any person or persons not a partner shall become interested with him in the partnership.
+    
+    c. Purchase an investment for the partnership where less than the full purchase price is paid for same.
+    
+    d. Use the partnership name, credit or property for other than partnership purposes.
+    
+    e. Do any act detrimental to the interests of the partnership or which would make it impossible to carry on the business or affairs of the partnership.
+
+This Agreement of Partnership shall be binding upon the respective heirs, executors, administrators and personal representatives of the partners.
+
+The partners have caused this Agreement of Partnership to be executed on the dates indicated below, effective as of the date indicated above.
+
+SIGN AND DATE HERE
+
+___________________________________________________________
+
+___________________________________________________________
+
+___________________________________________________________
+
+___________________________________________________________
