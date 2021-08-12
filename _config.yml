@@ -4,10 +4,10 @@ email: test@example.com
 description: > # this means to ignore newlines until "baseurl:"
   Cypress Investment Club
 baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "https://example.com" # the base hostname & protocol for your site
+url: "https://cyic.club" # the base hostname & protocol for your site
 
 twitter_username: example
-github_username: example
+github_username: cyic
 
 # Build settings
 markdown: kramdown
