@@ -1,17 +1,14 @@
-# Much-Worse jekyll theme
+# Creative Theme for Jekyll
 
-This theme is avaiable under [MIT License](https://opensource.org/licenses/MIT).
+A Jekyll implementation of the [Creative Theme](http://startbootstrap.com/template-overviews/creative/) template by [Start Bootstrap](http://startbootstrap.com).
 
-This is a modified version of [Steve Miller's NGVM theme](http://jekyllthemes.org/themes/svm-ngvb/). Since this work is a derivative of Prof. Miller's, therefore it is only fair that I honour his self-deprecating spirit and name this **much-worse**. I prefer large seriff fonts and minimal coloring and styling. Apart form the typography, color scheme and layout,
-this theme has two useful changes:
+Creative is a one page Bootstrap theme for creatives, small businesses, and other multipurpose uses.
+The theme includes a number of rich features and plugins that you can use as a great boilerplate for your next Jekyll project! 
 
-- It allows you to maintain your website as a subdirectory on your university of company domain (e.g. http://university.edu/department/people/your-website). Most Jekyll blogs are
-designed to be hosted at custom domain names.
+See it live in action at <https://volny.github.io/creative-theme-jekyll/>
 
-- Most jekyll themes are blog-centric, or single page websites. This theme lets you create multi-page website with a blog if you want.
+## To use the Creative Theme template in your project
 
-Both the above are not seminal achievements in science, but they are useful. This theme also supports site analytics including [Statcounter](http://statcounter.com) and major comment providers for blogs.
+- Start by adding your info in `_config.yml`
+- In `_layouts/front.html` reorder or remove section as you prefer.
 
-See it in action [here](http://people.csail.mit.edu/gchauras).
-
-Feel free to send me pull requests with better responsive performance or cleaner HTML/CSS.

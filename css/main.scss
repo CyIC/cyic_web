@@ -1,54 +1,44 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @charset "utf-8";
 
-$base-font-family: 'EB Garamond', serif;
-$base-font-size:   x-large;
-$small-font-size:  0.875em;
-$vsmall-font-size: 0.66em;
-$base-line-height: 1.5;
-$spacing-unit:     1.5em;
+// Example Defaults
+// $base-font-family: Helvetica, Arial, sans-serif;
+// $base-font-size:   16px;
+// $small-font-size:  $base-font-size * 0.875;
+// $base-line-height: 1.5;
 
-$grey-vlight:#eee;
-$grey-light: #ccc;
-$grey:       #888;
-$grey-dark:  #444;
-$grey-vdark: #222;
-$blue:       #0091ed;
-$orange:     #ca6c18;
-$red:        #b6321c;
+// $spacing-unit:     30px;
 
-$background:        $grey-vlight;
-$dark-background:   darken($background, 5%);
-$text-color:        $grey-vdark;
-$text-light-color:  $grey;
-$url-color:         $red;
-$url-hover-color:   $orange;
-$header-text-color: $text-light-color;
-$header-hover-color:$text-color;
-$header-hover-url:  $url-color;
-$line-color:        $grey-light;
+// $text-color:       #111;
+// $background-color: #fdfdfd;
+// $brand-color:      #2a7ae2;
 
-// Width of the content area
-$content-width:    50em;
-$content-min-width:15em;
-$mobile:           32em;
-$desktop:          50em;
+// $grey-color:       #828282;
+// $grey-color-light: lighten($grey-color, 40%);
+// $grey-color-dark:  darken($grey-color, 25%);
 
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
+// // Width of the content area
+// $content-width:    800px;
+
+// $on-palm:          600px;
+// $on-laptop:        800px;
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+
+// variables.less
+$theme-primary: #F05F40;
+$theme-dark: #222;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-    "header",
-    "mobile-header",
-    "base",
-    "footer",
-    "page",
-    "syntax-highlighting",
-    "fancy-image"
+        "mixins",
+        "base"
 ;
