@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body id="page-top">
+  {% include nav.html %}
+  <header>
+      <div class="header-content">
+          <div class="header-content-inner">
+              <h1>Cypress Investment Club</h1>
+              <hr>
+              <p>Profit through combined intellect, research and capitol.</p>
+              <a href="/index.html#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+          </div>
+      </div>
+  </header>
+  <section id="principals">
+      <div class="container">
+          <h1>{{ page.title }}</h1>
+      </div>
+      <div class="container">
+              {{ content }}
+      </div>
+  </section>
+  {% include aside.html %}
+  {% include contact.html %}
+  {% include scripts.html %}
+
+</body>
+</html>
