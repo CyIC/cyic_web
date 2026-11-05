@@ -45,9 +45,19 @@ club:
 
 markdown: kramdown
 
+# Setting `exclude` REPLACES Jekyll's default list rather than extending it,
+# so the vendor/ entries below have to be restated. Without them a CI run that
+# bundles into vendor/bundle inside the workspace makes Jekyll try to render
+# its own gem's post template, which has an ERB placeholder where its date
+# should be, and the build dies.
 exclude:
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
   - node_modules
   - src
+  - script
   - package.json
   - package-lock.json
   - Gemfile

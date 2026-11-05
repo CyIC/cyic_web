@@ -7,9 +7,12 @@ name: Build
 # a green run means the live build will succeed too. It does not deploy
 # anything - Pages still publishes from the default branch on its own.
 
+# Push is limited to the long-lived branches: a branch with an open pull
+# request already gets a run from `pull_request`, and listing it here too
+# built every commit twice.
 on:
   push:
-    branches: [master, main, 'redesign/**']
+    branches: [master, main]
   pull_request:
   workflow_dispatch:
 
