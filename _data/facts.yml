@@ -10,5 +10,5 @@
   label: Member cap
   note: Small enough that everyone speaks
 - value: "1"
-  label: Vote per member
-  note: Equal share, every decision
+  label: Vote per active partner
+  note: The default; any partner may call a weighted retally
