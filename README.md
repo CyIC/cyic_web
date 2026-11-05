@@ -30,6 +30,37 @@ bundle exec jekyll serve
 Run `npm run css:watch` in a second terminal so stylesheet changes pick up as
 you edit.
 
+The Gemfile depends on the **`github-pages`** gem rather than on `jekyll`
+directly. Pages ignores this Gemfile and builds with its own pinned toolchain,
+so matching it here keeps local, CI and production on the same Jekyll version.
+`Gemfile.lock` is intentionally not committed: the old one was pinned to
+Windows-only platforms and broke Linux CI, and Pages resolves its own versions
+anyway.
+
+## Continuous integration
+
+[`.github/workflows/build.yml`](.github/workflows/build.yml) runs on every push
+and pull request. It does not deploy — Pages still publishes on its own — it
+just catches the things that would otherwise break the live site silently:
+
+- **Stylesheet is current.** Recompiles Tailwind and fails if
+  `css/tailwind.css` differs from what is committed. This is the easiest
+  mistake to make: change a class, forget `npm run css`, and the live site
+  silently keeps the old styles.
+- **Jekyll build.** Installs the `github-pages` gem and builds with
+  `--strict_front_matter`, so a malformed front matter block fails instead of
+  silently dropping a page.
+- **Link check.** [`script/check-links.mjs`](script/check-links.mjs) walks the
+  built `_site` and verifies every internal link, image and `#anchor` resolves,
+  and that no link is left as a bare `#`. Run it yourself with:
+
+  ```bash
+  node script/check-links.mjs _site
+  ```
+
+  It is dependency-free and does not touch the network, so it is fast and
+  deterministic. External URLs are not checked.
+
 ## Where things live
 
 | Path | What it is |
