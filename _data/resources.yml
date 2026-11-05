@@ -5,8 +5,8 @@
     - name: Club Wiki
       url: "https://thecyic.atlassian.net/wiki"
       body: Agendas, meeting minutes, onboarding material, and the research archive.
-    - name: Slack
-      url: "https://join.slack.com/t/cyic/shared_invite/zt-1x6c4fir6-FgPGECvGT5ipJtMDyZIhcQ"
+    - name: Discord
+      url: "https://discord.gg/FStB5tqxBR"
       body: Day-to-day conversation between meetings, and the front door for visitors.
     - name: MyICLUB
       url: "https://www.myiclub.com"

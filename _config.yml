@@ -23,7 +23,7 @@ github_username: CyIC
 
 # Every outbound destination in one place so templates never hardcode a URL.
 links:
-  slack: "https://join.slack.com/t/cyic/shared_invite/zt-1x6c4fir6-FgPGECvGT5ipJtMDyZIhcQ"
+  discord: "https://discord.gg/FStB5tqxBR"
   wiki: "https://thecyic.atlassian.net/wiki"
   youtube: "https://www.youtube.com/channel/UCUhhBb8XqV7Xw5PRDVFRXkA"
   myiclub: "https://www.myiclub.com"
