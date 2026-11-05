@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<header class="border-b border-line bg-bg-subtle">
+  <div class="wrap-narrow py-16 sm:py-20">
+    {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+    <h1 class="mt-3 font-display text-4xl font-semibold tracking-tight text-fg sm:text-5xl">{{ page.title }}</h1>
+    {% if page.lede %}
+    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-fg-muted">{{ page.lede }}</p>
+    {% endif %}
+  </div>
+</header>
+
+<div class="wrap-narrow py-16 sm:py-20">
+  {{ content }}
+</div>

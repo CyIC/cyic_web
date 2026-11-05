@@ -1,25 +1,44 @@
 ---
-layout: article
+layout: page
 title: Resources
+eyebrow: Tools we actually use
+lede: >-
+  The club&rsquo;s own systems, the primary sources we research from, and the
+  news we read with appropriate suspicion.
+description: >-
+  Tools, filings databases, and reading used by Cypress Investment Club
+  members: the club wiki, MyICLUB, SEC EDGAR, Alpha Vantage and more.
 ---
-<h2>Club Websites</h2>
-<a href="https://thecyic.atlassian.net/wiki">Club Wiki</a> - This is our collaboration and resource sharing site.<br>
-<a href="https://join.slack.com/t/cyic/shared_invite/zt-u8mugr1x-48ELteHYiiwZnvUDxNXmqQ">Slack</a> - Our current method of communication outside of meetings.<br>
-<a href="https://www.myiclub.com">MyiClub</a> - Our current system of record for portfolios and finances.<br>
-<a href="https://www.youtube.com/channel/UCUhhBb8XqV7Xw5PRDVFRXkA">CyIC YouTube</a> - Videos and more from CyIC.<br>
 
-<h2>Analysis Tools</h2>
+{%- for group in site.data.resources %}
+<section class="mb-16 last:mb-0">
+  <h2 class="font-display text-2xl font-semibold tracking-tight text-fg">{{ group.group }}</h2>
+  <p class="mt-3 max-w-xl leading-relaxed text-fg-muted">{{ group.blurb }}</p>
 
-<h2>Data Sets</h2>
-<a href="https://www.sec.gov/edgar/searchedgar/companysearch.html">SEC Edgar</a> - Look up official company reports and filings<br>
-<a href="https://www.alphavantage.co/">Alphavantage</a> - API for stock prices and company info.<br>
+  <ul class="mt-8 grid gap-4 sm:grid-cols-2">
+    {%- for item in group.items %}
+    <li>
+      <a href="{{ item.url }}" target="_blank" rel="noopener"
+         class="card group flex h-full flex-col p-6 transition-colors hover:border-accent">
+        <span class="flex items-start justify-between gap-3">
+          <span class="font-display text-base font-semibold text-fg group-hover:text-accent-text">{{ item.name }}</span>
+          <span class="mt-0.5 shrink-0 text-fg-faint transition-colors group-hover:text-accent-text">
+            {% include icon.html name="external" class="size-4" %}
+          </span>
+        </span>
+        <span class="mt-2 text-sm leading-relaxed text-fg-muted">{{ item.body }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endfor %}
 
-<div>
-<h2>News and Outside Analysis</h2>
-<a href="https://stocktwits.com/">StockTwits</a><br>
-<a href="https://www.benzinga.com/">Benzinga</a><br>
-<a href="http://seekingalpha.com/">Seeking Alpha</a><br>
-<a href="https://www.marketwatch.com/">MarketWatch</a><br>
-</div>
-
-
+<aside class="card border-accent/30 bg-accent-soft p-8">
+  <h2 class="font-display text-lg font-semibold text-fg">A note on all of the above</h2>
+  <p class="mt-3 leading-relaxed text-fg-muted">
+    None of these are endorsements, and none of them are a substitute for
+    reading a company&rsquo;s own filings. The club requires a completed
+    worksheet, not a link to someone else&rsquo;s opinion.
+  </p>
+</aside>

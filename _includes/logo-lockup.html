@@ -1,0 +1,12 @@
+{%- comment -%}
+  Full wordmark lockup. Two files rather than one inline SVG because <img>
+  cannot inherit currentColor; the dark variant swaps the charcoal for cream.
+  Usage: {% include logo-lockup.html class="h-16 w-auto" %}
+{%- endcomment -%}
+{%- assign c = include.class | default: 'h-14 w-auto' -%}
+<img src="{{ '/img/logo/cyic-lockup.svg' | relative_url }}"
+     alt="{{ include.alt | default: site.title }}"
+     class="{{ c }} dark:hidden" width="734" height="247">
+<img src="{{ '/img/logo/cyic-lockup-inverse.svg' | relative_url }}"
+     alt="{{ include.alt | default: site.title }}"
+     class="{{ c }} hidden dark:block" width="734" height="247">

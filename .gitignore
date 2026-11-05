@@ -5,3 +5,5 @@ _site/
 
 # ignore IDE files
 .idea
+# node tooling for the Tailwind build (css/tailwind.css itself IS committed)
+node_modules/

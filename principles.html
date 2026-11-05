@@ -1,0 +1,72 @@
+---
+layout: page
+title: Principles
+eyebrow: How we invest
+lede: >-
+  One objective and four principles. They are short on purpose, because
+  principles you cannot recall under pressure are decoration.
+description: >-
+  The Cypress Investment Club objective and the four investing principles
+  behind it: invest regularly, diversify, reinvest everything, and buy growth.
+---
+
+<section aria-labelledby="objective" class="card bg-bg-subtle p-8 sm:p-10">
+  <p class="eyebrow">The objective</p>
+  <h2 id="objective" class="mt-3 font-display text-2xl font-semibold tracking-tight text-fg sm:text-3xl">
+    Double the club&rsquo;s money in {{ site.club.objective_years }}
+  </h2>
+  <p class="mt-5 leading-relaxed text-fg-muted">
+    {{ site.club.objective_multiple }} appreciation over
+    {{ site.club.objective_years }} works out to
+    <strong class="font-semibold text-fg">{{ site.club.target_cagr }} compounded annually</strong>.
+    We state it as a single number because a single number can be tested.
+    Every company proposed to the club is measured against it, and so is the
+    club itself.
+  </p>
+</section>
+
+<section aria-labelledby="the-principles" class="mt-16">
+  <h2 id="the-principles" class="font-display text-2xl font-semibold tracking-tight text-fg">
+    Four principles
+  </h2>
+
+  <ol class="mt-8">
+    {%- for principle in site.data.principles %}
+    <li class="border-t border-line py-9 first:border-t-0 first:pt-0">
+      <div class="flex gap-5">
+        <span class="font-display text-sm font-semibold tabular-nums text-accent-text" aria-hidden="true">
+          {{ forloop.index | prepend: '0' }}
+        </span>
+        <div>
+          <h3 class="font-display text-xl font-semibold tracking-tight text-fg">{{ principle.title }}</h3>
+          <p class="mt-3 leading-relaxed text-fg-muted">{{ principle.body }}</p>
+        </div>
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+<section aria-labelledby="in-practice" class="mt-16 border-t border-line pt-12">
+  <h2 id="in-practice" class="font-display text-2xl font-semibold tracking-tight text-fg">
+    What this looks like in a meeting
+  </h2>
+  <div class="rich mt-6">
+    <p>
+      A member brings a company they have researched on the club&rsquo;s
+      standard worksheet, circulated beforehand so nobody is reading it cold.
+      They make the case. The room pushes back: on the growth assumption, on
+      the price, on whether we already own something too similar.
+    </p>
+    <p>
+      Then we vote, one member one vote, and the reasoning is written down
+      whichever way it goes. Sometimes the presenter is sent away to come back
+      with more. That is not a failure of the process; it is the process.
+    </p>
+    <p>
+      <a href="{{ '/faq.html#process' | relative_url }}">More on how decisions get made</a>
+      &middot;
+      <a href="{{ site.links.bylaws }}" target="_blank" rel="noopener">Read the bylaws</a>
+    </p>
+  </div>
+</section>

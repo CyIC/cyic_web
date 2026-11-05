@@ -1,13 +1,59 @@
-# Site settings
+# ---------------------------------------------------------------------------
+# Cypress Investment Club - cyic.club
+# Built by Jekyll natively on GitHub Pages (no Actions workflow required).
+# Tailwind is compiled locally with `npm run css`; the output css/tailwind.css
+# is committed so the native Pages build has nothing to compile.
+# ---------------------------------------------------------------------------
+
 title: Cypress Investment Club
+short_title: CyIC
+tagline: Profit through combined intellect, research, and capital.
 email: web@cyic.club
-description: > # this means to ignore newlines until "baseurl:"
-  Cypress Investment Club
-baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "https://cyic.club" # the base hostname & protocol for your site
+description: >-
+  Cypress Investment Club is a member-run partnership in which people pool
+  modest monthly contributions, research companies together, and vote on every
+  investment the club makes.
+lang: en
+
+url: "https://cyic.club"
+baseurl: ""
 
 twitter_username: cypressinvclub
-github_username: cyic
+github_username: CyIC
 
-# Build settings
+# Every outbound destination in one place so templates never hardcode a URL.
+links:
+  slack: "https://join.slack.com/t/cyic/shared_invite/zt-1x6c4fir6-FgPGECvGT5ipJtMDyZIhcQ"
+  wiki: "https://thecyic.atlassian.net/wiki"
+  youtube: "https://www.youtube.com/channel/UCUhhBb8XqV7Xw5PRDVFRXkA"
+  myiclub: "https://www.myiclub.com"
+  github: "https://github.com/CyIC"
+  twitter: "https://twitter.com/cypressinvclub"
+  documents: "https://github.com/CyIC/documents"
+  bylaws: "https://github.com/CyIC/documents/blob/main/CyICBylaws"
+  sec_clubs: "https://www.sec.gov/reportspubs/investor-publications/investor-pubs-invclub"
+
+# Club facts referenced across pages. Changing one here updates every mention.
+club:
+  objective_multiple: "100%"
+  objective_years: "5 years"
+  target_cagr: "14.9%"
+  minimum_monthly: "$10"
+  member_cap: 20
+  meeting_cadence: "Second Friday of the month"
+  meetings_to_apply: 2
+
 markdown: kramdown
+
+exclude:
+  - node_modules
+  - src
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+  - .gitlab
+  - .idea
+  - .github

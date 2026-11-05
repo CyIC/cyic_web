@@ -1,0 +1,114 @@
+---
+layout: page
+title: Join the club
+eyebrow: Membership
+lede: >-
+  Four steps, a couple of months, and a unanimous vote. Here is exactly what
+  to expect and what it costs.
+description: >-
+  How to join Cypress Investment Club: attend two meetings, submit a stock
+  checklist, and stand for a unanimous vote. Minimum $10 per month, capped at
+  20 members.
+---
+
+<section aria-labelledby="steps">
+  <h2 id="steps" class="font-display text-2xl font-semibold tracking-tight text-fg">The process</h2>
+
+  <ol class="mt-8">
+    {%- for step in site.data.steps %}
+    <li class="border-t border-line py-8 first:border-t-0 first:pt-0">
+      <div class="flex gap-5">
+        <span class="grid size-9 shrink-0 place-items-center rounded-full bg-accent-soft font-display text-sm font-semibold tabular-nums text-accent-text">
+          {{ forloop.index }}
+        </span>
+        <div class="pt-1">
+          <h3 class="font-display text-xl font-semibold tracking-tight text-fg">{{ step.title }}</h3>
+          <p class="mt-3 leading-relaxed text-fg-muted">{{ step.body }}</p>
+        </div>
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+<section aria-labelledby="commitment" class="mt-16 border-t border-line pt-14">
+  <h2 id="commitment" class="font-display text-2xl font-semibold tracking-tight text-fg">
+    What you are committing to
+  </h2>
+
+  <dl class="mt-8 grid gap-6 sm:grid-cols-2">
+    <div class="card p-6">
+      <dt class="font-display text-sm font-medium text-fg-faint">Money</dt>
+      <dd class="mt-2 font-display text-2xl font-semibold text-accent-text">{{ site.club.minimum_monthly }} / month minimum</dd>
+      <p class="mt-3 text-sm leading-relaxed text-fg-muted">
+        No fee to join and no fee to withdraw your funds. Hardship exceptions
+        are available &mdash; just ask.
+      </p>
+    </div>
+    <div class="card p-6">
+      <dt class="font-display text-sm font-medium text-fg-faint">Time</dt>
+      <dd class="mt-2 font-display text-2xl font-semibold text-accent-text">~2 hours / month</dd>
+      <p class="mt-3 text-sm leading-relaxed text-fg-muted">
+        Plus research time during the month. Miss three meetings and the
+        partners can vote you out, which keeps the club real.
+      </p>
+    </div>
+    <div class="card p-6">
+      <dt class="font-display text-sm font-medium text-fg-faint">Participation</dt>
+      <dd class="mt-2 font-display text-2xl font-semibold text-accent-text">One member, one vote</dd>
+      <p class="mt-3 text-sm leading-relaxed text-fg-muted">
+        Members are required to be active in evaluating and voting on
+        securities. That is an SEC expectation as well as ours.
+      </p>
+    </div>
+    <div class="card p-6">
+      <dt class="font-display text-sm font-medium text-fg-faint">Learning</dt>
+      <dd class="mt-2 font-display text-2xl font-semibold text-accent-text">Onboarding training</dd>
+      <p class="mt-3 text-sm leading-relaxed text-fg-muted">
+        You will be trained on the stock worksheet before you are asked to
+        present one. Beginners are genuinely welcome.
+      </p>
+    </div>
+  </dl>
+</section>
+
+<section aria-labelledby="not" class="mt-16 border-t border-line pt-14">
+  <h2 id="not" class="font-display text-2xl font-semibold tracking-tight text-fg">What the club is not</h2>
+  <div class="rich mt-6">
+    <ul>
+      <li>
+        <strong>Not a fund.</strong> You cannot hand us money to manage.
+        Investment clubs operate under
+        <a href="{{ site.links.sec_clubs }}" target="_blank" rel="noopener">specific SEC rules</a>
+        that require members to participate, so we are not open to the public
+        as an investment vehicle.
+      </li>
+      <li>
+        <strong>Not a broker or adviser.</strong> Nobody here is licensed, and
+        nothing we publish is investment advice.
+      </li>
+      <li>
+        <strong>Not passive.</strong> If you want to set it and forget it, an
+        index fund will serve you better and we will say so cheerfully.
+      </li>
+      <li>
+        <strong>Not unlimited.</strong> {{ site.club.member_cap }} members is
+        the cap. If we are full, we will help you start your own club.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="start" class="card mt-16 bg-bg-subtle p-8 sm:p-10">
+  <h2 id="start" class="font-display text-2xl font-semibold tracking-tight text-fg">Start with step one</h2>
+  <p class="mt-4 max-w-xl leading-relaxed text-fg-muted">
+    Join the Slack and introduce yourself. There is no cost, no application,
+    and no obligation to take it any further than a conversation.
+  </p>
+  <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+    <a href="{{ site.links.slack }}" target="_blank" rel="noopener" class="btn btn-primary">
+      {% include icon.html name="slack" class="size-5" %} Join us on Slack
+    </a>
+    <a href="{{ '/faq.html#joining' | relative_url }}" class="btn btn-outline">Read the joining FAQ</a>
+  </div>
+</section>

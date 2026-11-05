@@ -1,33 +1,51 @@
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  {%- assign page_title = page.title | default: site.title -%}
+  {%- assign page_desc = page.description | default: site.description -%}
+  {%- if page.title -%}
+    <title>{{ page.title }} &middot; {{ site.short_title }}</title>
+  {%- else -%}
+    <title>{{ site.short_title }} &middot; {{ site.title }}</title>
+  {%- endif -%}
+  <meta name="description" content="{{ page_desc | strip_newlines | strip }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
 
-    <title>CyIC - Cypress Investment Club</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_desc | strip_newlines | strip }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/img/logo.lgMaroon.2232x1152.png' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  {%- if site.twitter_username %}
+  <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  {%- endif %}
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131212" media="(prefers-color-scheme: dark)">
 
-    <!-- Custom Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+  <link rel="icon" href="{{ '/img/logo/cyic-bull.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="alternate icon" href="{{ '/img/favicon.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/img/bull.600.png' | relative_url }}">
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link rel="stylesheet" href="{{ '/css/tailwind.css' | relative_url }}">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+  <!-- Resolve the theme before first paint so there is no flash of the wrong
+       mode. Mirrors the logic in js/site.js; keep the two in sync. -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('cyic-theme');
+        var dark = stored ? stored === 'dark'
+          : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
+      } catch (e) { /* private mode: fall through to light */ }
+    })();
+  </script>
 </head>

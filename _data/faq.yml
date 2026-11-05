@@ -1,0 +1,159 @@
+# FAQ content. Answers may contain inline HTML; they are rendered unescaped.
+# Substance preserved from the original faq.html, copy tightened.
+
+- section: Joining
+  id: joining
+  questions:
+    - q: How do I join?
+      a: >-
+        Attend at least two meetings, then apply by submitting a completed
+        stock checklist on a company of your choosing. The partners then vote,
+        and acceptance has to be unanimous. Membership is capped at twenty
+        people. If we are full, or if the club is not the right fit, starting
+        your own is genuinely not difficult and we are happy to answer
+        questions about how.
+    - q: What minimum amount do I have to invest each month?
+      a: >-
+        Ten dollars a month. That floor is deliberate: we would rather the club
+        be affordable than exclusive. If you are experiencing hardship, a
+        hardship exception can be arranged.
+    - q: Are there fees to join or to withdraw funds?
+      a: >-
+        No. The club does not charge to join, and it does not charge to
+        withdraw any or all of your funds. If a withdrawal incurs a cost from a
+        vendor, the withdrawing member covers that cost. Keeping expenses down
+        is a standing priority, because every dollar of expense is a dollar not
+        invested.
+    - q: Do members have to belong to BetterInvesting, NAIC, or a similar body?
+      a: >-
+        No. We require no third-party memberships. Those subscriptions are an
+        expense, and we would rather commit that money to the portfolio.
+    - q: How experienced are the members?
+      a: >-
+        The range is wide, and that is the point. We are primarily an
+        educational organisation. Nobody here is finished learning, and helping
+        each other learn is part of the deal.
+    - q: What does the club expect of new members?
+      a: >-
+        Ask questions and complete the onboarding training. Those are the two
+        real obligations in your first few months.
+    - q: What time commitment is expected?
+      a: >-
+        At least two hours a month in the meeting itself, plus time during the
+        month to research new candidates and review the holdings assigned to
+        you. Investing is not an automated process, and the club is not a
+        licensed broker or wealth manager.
+
+- section: Meetings
+  id: meetings
+  questions:
+    - q: How often do you meet?
+      a: >-
+        The second Friday of every month. Meetings occasionally move or get
+        postponed depending on attendance.
+    - q: Is there an agenda?
+      a: >-
+        Yes, published in advance on our
+        <a href="https://thecyic.atlassian.net/wiki">team wiki</a> for members.
+    - q: Do meetings start and end on time?
+      a: >-
+        Not reliably. We are working on it.
+    - q: Do all members take part in choosing stocks?
+      a: >-
+        Yes, and participation is enforced. Under our
+        <a href="https://github.com/CyIC/documents/blob/main/CyICBylaws">bylaws</a>,
+        a member who misses three meetings can be voted out of the club.
+    - q: Does the club keep a written record of why it bought or sold?
+      a: >-
+        Yes. Members have access to the presentations and worksheets used in
+        each discussion, archived alongside the minutes.
+
+- section: Investment process
+  id: process
+  questions:
+    - q: Does the club have a stock selection methodology?
+      a: >-
+        We look for growth companies capable of roughly 14.9% compounded annual
+        appreciation, which is what doubling in five years requires. There is a
+        standard worksheet that every candidate goes through, and you will be
+        trained on it as a new member. Beyond the worksheet, it comes down to
+        making the argument to the other members.
+    - q: Is background material circulated before a purchase is proposed?
+      a: >-
+        Yes. The worksheet has to be completed and submitted before the meeting
+        at which it is discussed.
+    - q: Are presentations thorough? Are presenters prepared?
+      a: >-
+        Sometimes, and sometimes a presenter is sent away to come back with
+        more. That is what an educational club looks like in practice, and
+        nobody is embarrassed by it.
+    - q: How are decisions made? Weighted or equal-share voting?
+      a: >-
+        Equal share by default. One member, one vote. The
+        <a href="https://github.com/CyIC/documents/blob/main/CyICBylaws">bylaws</a>
+        set out the full process.
+    - q: Does the club diversify by size and industry?
+      a: >-
+        Yes. Diversification is one of the explicit criteria when a new holding
+        is assessed. We aim to spread across sector, industry, and company size
+        as laid out in our Investment Policy Statement.
+
+- section: Money, records, and tax
+  id: records
+  questions:
+    - q: Do members get meeting minutes promptly?
+      a: >-
+        Documents and minutes go up on the team site in near-real time.
+    - q: Can I see the partnership and operating agreements before deciding?
+      a: >-
+        You can read
+        <a href="https://github.com/CyIC/documents">all of them right now</a>,
+        before you talk to us at all. They are public.
+    - q: Do members get monthly valuations and status reports?
+      a: >-
+        Yes, delivered to members before each meeting and archived so any
+        member can review or audit them later.
+    - q: Does the club use unit valuation accounting?
+      a: >-
+        Yes. Unit valuations and each member's ownership share are reported
+        monthly.
+    - q: Are the club's financial records reviewed annually?
+      a: >-
+        The financials are delivered to members every month rather than only at
+        year end. We aim to operate as transparently as the accounting allows.
+    - q: Are tax filings handled properly?
+      a: >-
+        Yes. As a partnership the club files Form 1065 annually and distributes
+        K-1s to all partners through our platform.
+    - q: Is the club subject to SEC regulation?
+      a: >-
+        Investment clubs have
+        <a href="https://www.sec.gov/reportspubs/investor-publications/investor-pubs-invclub">specific rules</a>
+        under SEC guidance. Because of them we are not open to the public as an
+        investment vehicle, and members are required to be genuinely active in
+        evaluating and voting on securities. We are a club, not a fund.
+
+- section: Education
+  id: education
+  questions:
+    - q: How does the club keep members learning?
+      a: >-
+        We maintain and keep extending an education plan alongside the
+        portfolio work. It is a permanent work in progress, by design.
+    - q: What will I actually learn?
+      a: >-
+        The basics first: how businesses make money, what a share is, how the
+        market prices one. Where it goes from there depends on how far the
+        members want to push it.
+    - q: Is there a mentoring programme for new members?
+      a: >-
+        We are building one. Today it is informal, which mostly means you can
+        ask anyone anything.
+
+- section: Governance
+  id: governance
+  questions:
+    - q: Do officers change regularly?
+      a: >-
+        Yes. New officers are elected at the Annual Meeting in line with our
+        <a href="https://github.com/CyIC/documents/blob/main/CyICBylaws">bylaws</a>.

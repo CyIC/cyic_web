@@ -1,0 +1,46 @@
+# Grouped links for the Resources page.
+- group: Club systems
+  blurb: Where the work actually happens. Most of these need a member account.
+  items:
+    - name: Club Wiki
+      url: "https://thecyic.atlassian.net/wiki"
+      body: Agendas, meeting minutes, onboarding material, and the research archive.
+    - name: Slack
+      url: "https://join.slack.com/t/cyic/shared_invite/zt-1x6c4fir6-FgPGECvGT5ipJtMDyZIhcQ"
+      body: Day-to-day conversation between meetings, and the front door for visitors.
+    - name: MyICLUB
+      url: "https://www.myiclub.com"
+      body: System of record for the portfolio, unit valuations, and member accounting.
+    - name: Governing documents
+      url: "https://github.com/CyIC/documents"
+      body: Bylaws, partnership agreement, and operating agreement, in public.
+    - name: YouTube
+      url: "https://www.youtube.com/channel/UCUhhBb8XqV7Xw5PRDVFRXkA"
+      body: Recorded talks and walkthroughs from club members.
+- group: Filings and data
+  blurb: Primary sources. Read the company's own words before anyone else's.
+  items:
+    - name: SEC EDGAR
+      url: "https://www.sec.gov/edgar/searchedgar/companysearch.html"
+      body: Every 10-K, 10-Q, 8-K, and proxy a US-listed company has filed.
+    - name: Alpha Vantage
+      url: "https://www.alphavantage.co/"
+      body: Free API for prices, fundamentals, and company metadata.
+    - name: SEC guidance on investment clubs
+      url: "https://www.sec.gov/reportspubs/investor-publications/investor-pubs-invclub"
+      body: The rules that shape how a club like ours is allowed to operate.
+- group: News and outside analysis
+  blurb: Useful for finding an argument to test. None of it is a reason to buy on its own.
+  items:
+    - name: Seeking Alpha
+      url: "http://seekingalpha.com/"
+      body: Long-form bull and bear cases, of wildly varying quality.
+    - name: MarketWatch
+      url: "https://www.marketwatch.com/"
+      body: General market and company news.
+    - name: Benzinga
+      url: "https://www.benzinga.com/"
+      body: Fast-moving headlines, earnings, and analyst moves.
+    - name: StockTwits
+      url: "https://stocktwits.com/"
+      body: Sentiment, mostly. Treat accordingly.
