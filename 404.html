@@ -1,0 +1,21 @@
+---
+layout: default
+title: Page not found
+permalink: /404.html
+hide_cta: true
+description: That page does not exist on cyic.club.
+---
+<section class="wrap flex min-h-[60vh] flex-col items-center justify-center py-24 text-center">
+  <p class="eyebrow">404</p>
+  <h1 class="mt-4 font-display text-4xl font-semibold tracking-tight text-fg sm:text-5xl">
+    That page has moved on
+  </h1>
+  <p class="mt-5 max-w-md leading-relaxed text-fg-muted">
+    The link is broken or the page no longer exists. The main sections are all
+    one click away.
+  </p>
+  <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+    <a href="{{ '/' | relative_url }}" class="btn btn-primary">Back to the home page</a>
+    <a href="{{ '/faq.html' | relative_url }}" class="btn btn-outline">Read the FAQ</a>
+  </div>
+</section>

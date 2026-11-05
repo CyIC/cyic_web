@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+@source "../*.html";
+@source "../_includes/**/*.html";
+@source "../_layouts/**/*.html";
+
+/* Class-based dark mode, toggled on <html> by the no-flash script in head.html. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------------------
+   Brand primitives
+   Sampled from img/logo.lgMaroon.2232x1152.png:
+     maroon  #652325  (wordmark)   -> maroon-800, the anchor of the ramp
+     charcoal #222222 (bull mark)  -> ink-900
+   The maroon ramp is generated in OKLCH at the brand hue (21.5deg) so the
+   steps are perceptually even rather than naive lighten/darken.
+--------------------------------------------------------------------------- */
+@theme {
+  --font-display: "Jost", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --color-maroon-50: #fcf3f3;
+  --color-maroon-100: #f8e5e4;
+  --color-maroon-200: #f3cfcd;
+  --color-maroon-300: #e6b1ae;
+  --color-maroon-400: #d18c8a;
+  --color-maroon-500: #b36967;
+  --color-maroon-600: #984d4d;
+  --color-maroon-700: #7e393a;
+  --color-maroon-800: #652325;
+  --color-maroon-900: #551f20;
+  --color-maroon-950: #350b0d;
+
+  --color-ink-50: #faf9f8;
+  --color-ink-100: #f4f2f1;
+  --color-ink-200: #e8e4e2;
+  --color-ink-300: #d5d0cd;
+  --color-ink-400: #a8a19d;
+  --color-ink-500: #7b7471;
+  --color-ink-600: #595350;
+  --color-ink-700: #413c3a;
+  --color-ink-800: #2b2827;
+  --color-ink-900: #222222;
+  --color-ink-950: #131212;
+}
+
+/* ---------------------------------------------------------------------------
+   Semantic tokens. Declared with @theme inline so the generated utilities
+   reference the custom property directly and therefore re-resolve under .dark.
+--------------------------------------------------------------------------- */
+@theme inline {
+  --color-bg: var(--c-bg);
+  --color-bg-subtle: var(--c-bg-subtle);
+  --color-bg-raised: var(--c-bg-raised);
+  --color-bg-inverse: var(--c-bg-inverse);
+  --color-fg: var(--c-fg);
+  --color-fg-muted: var(--c-fg-muted);
+  --color-fg-faint: var(--c-fg-faint);
+  --color-fg-inverse: var(--c-fg-inverse);
+  --color-line: var(--c-line);
+  --color-line-strong: var(--c-line-strong);
+  --color-accent: var(--c-accent);
+  --color-accent-hover: var(--c-accent-hover);
+  --color-accent-fg: var(--c-accent-fg);
+  --color-accent-soft: var(--c-accent-soft);
+  --color-accent-text: var(--c-accent-text);
+}
+
+:root {
+  color-scheme: light;
+  --c-bg: #ffffff;
+  --c-bg-subtle: #faf9f8;
+  --c-bg-raised: #ffffff;
+  --c-bg-inverse: #1b1a19;
+  --c-fg: #1b1a19;
+  --c-fg-muted: #595350;
+  /* Darker than ink-500 so tertiary text clears 4.5:1 on bg-subtle too
+     (ink-500 managed only 4.36 there). */
+  --c-fg-faint: #736c69;
+  --c-fg-inverse: #faf9f8;
+  --c-line: #e8e4e2;
+  --c-line-strong: #d5d0cd;
+  --c-accent: #652325;
+  --c-accent-hover: #7e393a;
+  --c-accent-fg: #ffffff;
+  --c-accent-soft: #fcf3f3;
+  --c-accent-text: #652325;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --c-bg: #131212;
+  --c-bg-subtle: #1a1918;
+  --c-bg-raised: #201e1d;
+  --c-bg-inverse: #faf9f8;
+  --c-fg: #f4f2f1;
+  --c-fg-muted: #b0a9a5;
+  /* Lightened for the same reason as its light-mode counterpart. */
+  --c-fg-faint: #918a86;
+  --c-fg-inverse: #1b1a19;
+  --c-line: #302d2c;
+  --c-line-strong: #413c3a;
+  --c-accent: #7e393a;
+  --c-accent-hover: #984d4d;
+  --c-accent-fg: #ffffff;
+  --c-accent-soft: #241a1a;
+  --c-accent-text: #d18c8a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  body {
+    background-color: var(--c-bg);
+    color: var(--c-fg);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--c-accent-text);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  ::selection {
+    background-color: var(--c-accent);
+    color: var(--c-accent-fg);
+  }
+}
+
+@layer components {
+  .wrap {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+    max-width: 72rem;
+  }
+  .wrap-narrow {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+    max-width: 48rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1;
+    padding: 0.875rem 1.5rem;
+    transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .btn-primary {
+    background-color: var(--c-accent);
+    color: var(--c-accent-fg);
+  }
+  .btn-primary:hover { background-color: var(--c-accent-hover); }
+  .btn-outline {
+    border: 1px solid var(--c-line-strong);
+    color: var(--c-fg);
+  }
+  .btn-outline:hover {
+    border-color: var(--c-accent);
+    color: var(--c-accent-text);
+  }
+  .btn-inverse {
+    background-color: var(--c-bg);
+    color: var(--c-accent-text);
+  }
+  .btn-inverse:hover { background-color: var(--c-bg-subtle); }
+
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--c-accent-text);
+  }
+
+  .card {
+    background-color: var(--c-bg-raised);
+    border: 1px solid var(--c-line);
+    border-radius: 0.75rem;
+  }
+
+  /* Long-form content (principles, FAQ, resources). Hand-rolled instead of
+     pulling in @tailwindcss/typography so light/dark stay on our tokens. */
+  .rich > * + * { margin-top: 1.25rem; }
+  .rich h2 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--c-line);
+  }
+  .rich h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+  .rich h3 {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+  .rich p, .rich li { color: var(--c-fg-muted); line-height: 1.75; }
+  .rich a {
+    color: var(--c-accent-text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .rich a:hover { text-decoration-thickness: 2px; }
+  .rich ul { list-style: disc; padding-left: 1.25rem; }
+  .rich ul > li + li { margin-top: 0.5rem; }
+  .rich strong { color: var(--c-fg); font-weight: 600; }
+}

@@ -1,0 +1,14 @@
+# Headline numbers for the home page stat band. Values that also appear in
+# prose are pulled from site.club in _config.yml.
+- value: "14.9%"
+  label: Target annual return
+  note: Compounded, to double in five years
+- value: "$10"
+  label: Minimum per month
+  note: Hardship exceptions available
+- value: "20"
+  label: Member cap
+  note: Small enough that everyone speaks
+- value: "1"
+  label: Vote per active partner
+  note: The default; any partner may call a weighted retally

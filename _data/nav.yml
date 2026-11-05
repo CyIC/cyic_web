@@ -1,0 +1,10 @@
+# Primary navigation. `external: true` renders the outbound arrow and
+# opens in a new tab.
+- title: How it works
+  url: /#how-it-works
+- title: Principles
+  url: /principles.html
+- title: FAQ
+  url: /faq.html
+- title: Resources
+  url: /resources.html

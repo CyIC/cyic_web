@@ -5,3 +5,11 @@ _site/
 
 # ignore IDE files
 .idea
+
+# node tooling for the Tailwind build (css/tailwind.css itself IS committed)
+node_modules/
+
+# Resolved by bundler per-environment. The committed lock was Windows-only
+# (x64-mingw platforms), which broke Linux CI, and GitHub Pages pins its own
+# versions regardless. Let bundler resolve github-pages fresh instead.
+Gemfile.lock
