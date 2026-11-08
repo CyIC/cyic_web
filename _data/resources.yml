@@ -7,7 +7,8 @@
       body: Agendas, meeting minutes, onboarding material, and the research archive.
     - name: Discord
       url: "https://discord.gg/FStB5tqxBR"
-      body: Day-to-day conversation between meetings, and the front door for visitors.
+      # Not "the front door for visitors": the club does not advertise a way in.
+      body: Day-to-day conversation between meetings, and where questions get asked.
     - name: MyICLUB
       url: "https://www.myiclub.com"
       body: System of record for the portfolio, unit valuations, and member accounting.
