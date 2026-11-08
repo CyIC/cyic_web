@@ -1,0 +1,22 @@
+# The four things the club exists to do. Rendered on the home page.
+- icon: book
+  title: Education
+  body: >-
+    Most of us arrived knowing less than we wanted to. Meetings are built to
+    close that gap: how a business makes money, how to read a filing, what a
+    valuation is actually claiming.
+- icon: chart
+  title: Investment
+  body: >-
+    Pooled capital buys a real, diversified portfolio that none of us would
+    assemble alone on ten or twenty dollars a month.
+- icon: search
+  title: Research
+  body: >-
+    Every proposed holding arrives as a completed worksheet, circulated before
+    the meeting, argued in the room, and recorded afterwards.
+- icon: users
+  title: Partnership
+  body: >-
+    A legal partnership and a social club. Open books, a real say in every
+    decision, and conversations worth showing up for.

@@ -1,0 +1,91 @@
+name: Build
+
+# Verifies what GitHub Pages will actually do with this repository.
+#
+# Pages builds the site natively and ignores the Gemfile, using its own pinned
+# toolchain from the github-pages gem. This workflow installs that same gem, so
+# a green run means the live build will succeed too. It does not deploy
+# anything - Pages still publishes from the default branch on its own.
+
+# Push is limited to the long-lived branches: a branch with an open pull
+# request already gets a run from `pull_request`, and listing it here too
+# built every commit twice.
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  stylesheet:
+    name: Tailwind stylesheet is current
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Recompile the stylesheet
+        run: npm run css
+
+      # css/tailwind.css is committed because Pages cannot run Tailwind. That
+      # only works if it is kept in step with the templates, so fail loudly
+      # when someone changes a class and forgets to rebuild.
+      - name: Fail if css/tailwind.css is stale
+        run: |
+          if ! git diff --quiet -- css/tailwind.css; then
+            echo "::error file=css/tailwind.css::css/tailwind.css is out of date. Run 'npm run css' and commit the result."
+            git --no-pager diff --stat -- css/tailwind.css
+            exit 1
+          fi
+          echo "css/tailwind.css is up to date."
+
+  jekyll:
+    name: Jekyll build and link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          # Match the Ruby that GitHub Pages builds with.
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Report the Jekyll version in use
+        run: bundle exec jekyll --version
+
+      # JEKYLL_ENV=production so the build matches Pages rather than a local
+      # development build. --strict_front_matter turns a malformed front matter
+      # block into a failure instead of a silently skipped page.
+      - name: Build
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --trace --strict_front_matter
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check internal links, assets and anchors
+        run: node script/check-links.mjs _site
+
+      # Handy for inspecting exactly what Pages would publish.
+      - name: Upload the built site
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site
+          retention-days: 7

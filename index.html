@@ -1,3 +1,223 @@
 ---
-layout: front
+layout: default
+description: >-
+  Cypress Investment Club is a member-run partnership. We pool modest monthly
+  contributions, research companies together, and vote on every investment
+  the club makes.
 ---
+
+<!-- ── Hero ───────────────────────────────────────────────────────────── -->
+<section class="relative overflow-hidden border-b border-line">
+  <!-- Soft maroon wash, kept behind content and out of the a11y tree. -->
+  <div aria-hidden="true"
+       class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60rem_40rem_at_70%_-10%,var(--color-accent-soft),transparent_70%)]"></div>
+
+  <div class="wrap grid items-center gap-14 py-20 sm:py-28 lg:grid-cols-12 lg:gap-10">
+    <div class="lg:col-span-7">
+      <p class="eyebrow">Est. for the long game &middot; {{ site.club.meeting_cadence }}</p>
+
+      <h1 class="mt-5 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-fg sm:text-5xl lg:text-6xl">
+        Profit through combined
+        <span class="text-accent-text">intellect, research,</span>
+        and capital.
+      </h1>
+
+      <p class="mt-7 max-w-xl text-lg leading-relaxed text-fg-muted">
+        A private investment club, not a fund. Partners contribute at least
+        {{ site.club.minimum_monthly }} a month, research real companies
+        together, and vote on everything the club buys or sells. Nobody here is
+        a professional. That is rather the point.
+      </p>
+
+      <!--
+        The primary action is to understand the club, not to join it. A private
+        investment club cannot publicly offer its interests, and a "join now"
+        button on the front page of a public site is exactly that.
+      -->
+      <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+        <a href="#how-it-works" class="btn btn-primary">
+          See how it works {% include icon.html name="arrow-right" class="size-4" %}
+        </a>
+        <a href="{{ '/principles.html' | relative_url }}" class="btn btn-outline">Read the principles</a>
+      </div>
+
+      <p class="mt-7 text-sm text-fg-faint">
+        Capped at {{ site.club.member_cap }} partners &middot;
+        Not open to the public &middot;
+        <a class="underline underline-offset-4 hover:text-accent-text" href="{{ site.links.documents }}" target="_blank" rel="noopener">Bylaws are public</a>
+      </p>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="mx-auto max-w-sm text-ink-900 dark:text-ink-50 lg:max-w-none">
+        {% include icon-bull.html class="h-56 w-auto mx-auto drop-shadow-sm sm:h-72" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Facts ──────────────────────────────────────────────────────────── -->
+<section class="border-b border-line bg-bg-subtle" aria-label="Club at a glance">
+  <div class="wrap grid gap-y-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+    {%- for fact in site.data.facts %}
+    <div class="lg:border-l lg:border-line lg:pl-6 lg:first:border-l-0 lg:first:pl-0">
+      <p class="font-display text-4xl font-semibold tracking-tight text-accent-text">{{ fact.value }}</p>
+      <p class="mt-2 font-display text-sm font-medium text-fg">{{ fact.label }}</p>
+      <p class="mt-1 text-sm text-fg-faint">{{ fact.note }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ── What we do ─────────────────────────────────────────────────────── -->
+<section id="about" class="wrap py-20 sm:py-28">
+  <div class="max-w-2xl">
+    <p class="eyebrow">What the club is for</p>
+    <h2 class="mt-3 font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
+      Four things, done properly
+    </h2>
+    <p class="mt-5 text-lg leading-relaxed text-fg-muted">
+      A club is a strange hybrid: part classroom, part portfolio, part standing
+      argument among friends. We try to be good at all three.
+    </p>
+  </div>
+
+  <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {%- for goal in site.data.goals %}
+    <div class="card p-7">
+      <span class="grid size-11 place-items-center rounded-lg bg-accent-soft text-accent-text">
+        {% include icon.html name=goal.icon class="size-5" %}
+      </span>
+      <h3 class="mt-5 font-display text-lg font-semibold text-fg">{{ goal.title }}</h3>
+      <p class="mt-3 text-sm leading-relaxed text-fg-muted">{{ goal.body }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ── How it works ───────────────────────────────────────────────────── -->
+<section id="how-it-works" class="border-y border-line bg-bg-subtle">
+  <div class="wrap py-20 sm:py-28">
+    <div class="grid gap-14 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-4">
+        <p class="eyebrow">Membership</p>
+        <h2 class="mt-3 font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
+          How a partner is admitted
+        </h2>
+        <p class="mt-5 leading-relaxed text-fg-muted">
+          Deliberately slow, and closed to the public. The club does not
+          advertise for partners; this is simply the procedure its own
+          documents set out, and it runs to months rather than days.
+        </p>
+        <a href="{{ '/join.html' | relative_url }}"
+           class="mt-7 inline-flex items-center gap-2 font-display font-medium text-accent-text hover:underline">
+          What membership involves {% include icon.html name="arrow-right" class="size-4" %}
+        </a>
+      </div>
+
+      <ol class="lg:col-span-8 lg:pt-2">
+        {%- for step in site.data.steps %}
+        <li class="flex gap-6 border-t border-line py-7 first:border-t-0 first:pt-0">
+          <span class="font-display text-sm font-semibold tabular-nums text-accent-text">{{ step.step }}</span>
+          <div>
+            <h3 class="font-display text-lg font-semibold text-fg">{{ step.title }}</h3>
+            <p class="mt-2 leading-relaxed text-fg-muted">{{ step.body }}</p>
+          </div>
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Principles ─────────────────────────────────────────────────────── -->
+<section class="wrap py-20 sm:py-28">
+  <div class="grid gap-14 lg:grid-cols-12 lg:gap-10">
+    <div class="lg:col-span-5">
+      <p class="eyebrow">How we invest</p>
+      <h2 class="mt-3 font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
+        Our objective, stated plainly
+      </h2>
+      <p class="mt-6 text-lg leading-relaxed text-fg-muted">
+        Double the club&rsquo;s money in {{ site.club.objective_years }}. That
+        is {{ site.club.target_cagr }} compounded annually, and it is the
+        number every candidate company is measured against.
+      </p>
+      <p class="mt-4 leading-relaxed text-fg-muted">
+        Four principles get us there, and we hold to them when the market makes
+        it uncomfortable &mdash; which is the only time holding to them counts.
+      </p>
+      <a href="{{ '/principles.html' | relative_url }}"
+         class="mt-7 inline-flex items-center gap-2 font-display font-medium text-accent-text hover:underline">
+        Read the principles {% include icon.html name="arrow-right" class="size-4" %}
+      </a>
+    </div>
+
+    <ul class="lg:col-span-7">
+      {%- for principle in site.data.principles %}
+      <li class="flex gap-4 border-b border-line py-6 last:border-b-0">
+        <span class="mt-1 shrink-0 text-accent-text">{% include icon.html name="check" class="size-5" %}</span>
+        <div>
+          <h3 class="font-display text-lg font-semibold text-fg">{{ principle.title }}</h3>
+          <p class="mt-2 leading-relaxed text-fg-muted">{{ principle.body | truncatewords: 34 }}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- ── Transparency ───────────────────────────────────────────────────── -->
+<section class="border-t border-line bg-bg-subtle">
+  <div class="wrap py-20 sm:py-24">
+    <div class="max-w-2xl">
+      <p class="eyebrow">Nothing hidden</p>
+      <h2 class="mt-3 font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
+        The paperwork is public
+      </h2>
+      <p class="mt-5 text-lg leading-relaxed text-fg-muted">
+        Our governing documents are on GitHub, in public, for anyone to read.
+        Partners get monthly valuations, unit accounting, and minutes in
+        near-real time.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <a href="{{ site.links.bylaws }}" target="_blank" rel="noopener"
+         class="card group p-7 transition-colors hover:border-accent">
+        <span class="flex items-center justify-between text-accent-text">
+          {% include icon.html name="doc" class="size-5" %}
+          {% include icon.html name="external" class="size-4 opacity-0 transition-opacity group-hover:opacity-100" %}
+        </span>
+        <h3 class="mt-5 font-display text-lg font-semibold text-fg">Bylaws</h3>
+        <p class="mt-2 text-sm leading-relaxed text-fg-muted">
+          Voting, officers, attendance, and what happens when a member leaves.
+        </p>
+      </a>
+
+      <a href="{{ site.links.documents }}" target="_blank" rel="noopener"
+         class="card group p-7 transition-colors hover:border-accent">
+        <span class="flex items-center justify-between text-accent-text">
+          {% include icon.html name="doc" class="size-5" %}
+          {% include icon.html name="external" class="size-4 opacity-0 transition-opacity group-hover:opacity-100" %}
+        </span>
+        <h3 class="mt-5 font-display text-lg font-semibold text-fg">Partnership agreement</h3>
+        <p class="mt-2 text-sm leading-relaxed text-fg-muted">
+          The operating and partnership agreements, in full and unedited.
+        </p>
+      </a>
+
+      <a href="{{ '/faq.html#records' | relative_url }}"
+         class="card group p-7 transition-colors hover:border-accent">
+        <span class="flex items-center justify-between text-accent-text">
+          {% include icon.html name="chart" class="size-5" %}
+          {% include icon.html name="arrow-right" class="size-4 opacity-0 transition-opacity group-hover:opacity-100" %}
+        </span>
+        <h3 class="mt-5 font-display text-lg font-semibold text-fg">Reporting and tax</h3>
+        <p class="mt-2 text-sm leading-relaxed text-fg-muted">
+          Monthly statements, unit valuation accounting, Form 1065 and K-1s.
+        </p>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+{%- comment -%}
+  Closing band, shown on every page above the footer.
+
+  This used to be a membership call-to-action. It is not one any more: an
+  invitation to join, repeated on every page of a public site, is the clearest
+  way for a private investment club to end up having publicly offered its
+  interests. The band now points at the club's governing documents instead,
+  which is the thing a reader actually benefits from.
+{%- endcomment -%}
+<section class="bg-bg-inverse text-fg-inverse">
+  <div class="wrap-narrow py-20 text-center sm:py-24">
+    <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">The club, in its own words</h2>
+    <p class="mx-auto mt-5 max-w-xl text-lg leading-relaxed opacity-80">
+      Bylaws, partnership agreement, and operating agreement are published in
+      full. Everything on this site is a plainer retelling of what they already
+      say.
+    </p>
+    <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <a href="{{ site.links.documents }}" target="_blank" rel="noopener" class="btn btn-inverse w-full sm:w-auto">
+        {% include icon.html name="doc" class="size-5" %} Read the governing documents
+      </a>
+      <a href="{{ '/faq.html' | relative_url }}" class="btn w-full border border-current/25 hover:bg-current/10 sm:w-auto">
+        Browse the FAQ
+      </a>
+    </div>
+  </div>
+</section>

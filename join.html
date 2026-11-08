@@ -1,0 +1,136 @@
+---
+layout: page
+title: Membership
+eyebrow: For the record
+lede: >-
+  Cypress Investment Club is a private club and does not offer membership to
+  the public. This page is a record of how it admits a partner and what that
+  partner takes on.
+description: >-
+  How Cypress Investment Club admits a partner, what a partner commits, and why
+  a private investment club is not open to the public.
+---
+
+<!--
+  This page is descriptive, not promotional. The club relies on the private
+  investment company exclusion under the Investment Company Act, which is
+  available only to a club that makes no public offering of its interests, and
+  a website that advertises membership can itself amount to one. Nothing here
+  should read as an offer, an invitation to apply, or a call to action.
+-->
+
+<section aria-labelledby="notice" class="card border-accent/40 bg-accent-soft p-6 sm:p-8">
+  <h2 id="notice" class="font-display text-lg font-semibold tracking-tight text-fg">
+    This is not an offer of membership
+  </h2>
+  <div class="rich mt-4 text-sm">
+    <p>
+      The club does not advertise, solicit, or accept unsolicited applications
+      for membership, and nothing on this site is an offer to sell or a
+      solicitation of an offer to buy an interest in the club or any security.
+      An interest in the club is not transferable, is not registered with any
+      securities regulator, and is not available to the public.
+    </p>
+    <p>
+      The club is published here because its members believe a club should be
+      able to show its workings. Read it as a record of how we operate.
+    </p>
+  </div>
+</section>
+
+<section aria-labelledby="steps" class="mt-16 border-t border-line pt-14">
+  <h2 id="steps" class="font-display text-2xl font-semibold tracking-tight text-fg">How a partner is admitted</h2>
+  <p class="mt-4 max-w-xl leading-relaxed text-fg-muted">
+    Deliberately slow, and deliberately hard to do at a distance. The existing
+    partners have to know who they are voting in.
+  </p>
+
+  <ol class="mt-8">
+    {%- for step in site.data.steps %}
+    <li class="border-t border-line py-8 first:border-t-0 first:pt-0">
+      <div class="flex gap-5">
+        <span class="grid size-9 shrink-0 place-items-center rounded-full bg-accent-soft font-display text-sm font-semibold tabular-nums text-accent-text">
+          {{ forloop.index }}
+        </span>
+        <div class="pt-1">
+          <h3 class="font-display text-xl font-semibold tracking-tight text-fg">{{ step.title }}</h3>
+          <p class="mt-3 leading-relaxed text-fg-muted">{{ step.body }}</p>
+        </div>
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+<section aria-labelledby="commitment" class="mt-16 border-t border-line pt-14">
+  <h2 id="commitment" class="font-display text-2xl font-semibold tracking-tight text-fg">
+    What a partner commits
+  </h2>
+
+  <dl class="mt-8 grid gap-6 sm:grid-cols-2">
+    <div class="card p-6">
+      <dt class="font-display text-sm font-medium text-fg-faint">Money</dt>
+      <dd class="mt-2 font-display text-2xl font-semibold text-accent-text">{{ site.club.minimum_monthly }} / month minimum</dd>
+      <p class="mt-3 text-sm leading-relaxed text-fg-muted">
+        The club charges nothing to join and nothing to withdraw funds. The
+        floor is low because a club should be affordable rather than exclusive.
+      </p>
+    </div>
+    <div class="card p-6">
+      <dt class="font-display text-sm font-medium text-fg-faint">Time</dt>
+      <dd class="mt-2 font-display text-2xl font-semibold text-accent-text">~2 hours / month</dd>
+      <p class="mt-3 text-sm leading-relaxed text-fg-muted">
+        Plus research time during the month. Falling short of a partner&rsquo;s
+        duties for three consecutive months is grounds for removal, which keeps
+        the club real.
+      </p>
+    </div>
+    <div class="card p-6">
+      <dt class="font-display text-sm font-medium text-fg-faint">Participation</dt>
+      <dd class="mt-2 font-display text-2xl font-semibold text-accent-text">One vote each, by default</dd>
+      <p class="mt-3 text-sm leading-relaxed text-fg-muted">
+        Any partner may ask for a vote to be retallied weighted by capital
+        account, and competing stock proposals are ranked on a point ballot.
+      </p>
+    </div>
+    <div class="card p-6">
+      <dt class="font-display text-sm font-medium text-fg-faint">Learning</dt>
+      <dd class="mt-2 font-display text-2xl font-semibold text-accent-text">Onboarding training</dd>
+      <p class="mt-3 text-sm leading-relaxed text-fg-muted">
+        Partners are trained on the stock worksheet before being asked to
+        present one. Experience is not a prerequisite; participation is.
+      </p>
+    </div>
+  </dl>
+</section>
+
+<section aria-labelledby="not" class="mt-16 border-t border-line pt-14">
+  <h2 id="not" class="font-display text-2xl font-semibold tracking-tight text-fg">What the club is not</h2>
+  <div class="rich mt-6">
+    <ul>
+      <li>
+        <strong>Not a fund.</strong> Nobody can hand the club money to manage.
+        Every partner is required to take an active part in researching and
+        voting on the club&rsquo;s holdings, which is precisely what keeps a
+        club a club under the
+        <a href="{{ site.links.sec_clubs }}" target="_blank" rel="noopener">SEC&rsquo;s guidance on investment clubs</a>.
+      </li>
+      <li>
+        <strong>Not a broker or adviser.</strong> No partner is licensed, no
+        partner is paid for advice, and nothing published here is investment
+        advice or a recommendation to buy or sell anything.
+      </li>
+      <li>
+        <strong>Not passive.</strong> Anyone who wants to set it and forget it
+        is better served by an index fund, and the club will say so cheerfully.
+      </li>
+      <li>
+        <strong>Not open.</strong> {{ site.club.member_cap }} partners is the
+        cap, admission is unanimous, and membership is not offered publicly.
+        Starting a club is genuinely not difficult, and the
+        <a href="{{ '/resources.html' | relative_url }}">resources</a> page
+        lists what we used to start this one.
+      </li>
+    </ul>
+  </div>
+</section>

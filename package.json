@@ -1,0 +1,14 @@
+{
+  "name": "cyic-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build tooling for the Cypress Investment Club site. Jekyll renders the HTML on GitHub Pages; this only compiles Tailwind into the committed css/tailwind.css.",
+  "scripts": {
+    "css": "tailwindcss -i ./src/tailwind.css -o ./css/tailwind.css --minify",
+    "css:watch": "tailwindcss -i ./src/tailwind.css -o ./css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.4",
+    "tailwindcss": "^4.3.4"
+  }
+}
