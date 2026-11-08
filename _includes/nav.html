@@ -30,9 +30,12 @@
         <span class="hidden dark:block">{% include icon.html name="sun" class="size-5" %}</span>
       </button>
 
-      <a href="{{ '/join.html' | relative_url }}"
-         class="btn btn-primary hidden px-4 py-2 text-sm sm:inline-flex">Join the club</a>
-
+      <!--
+        There is deliberately no "join" button here. A membership
+        call-to-action on every page of a public site is the clearest form of
+        publicly advertising membership, which a private investment club has to
+        avoid. Membership is a nav item like any other.
+      -->
       <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu"
               class="grid size-9 place-items-center rounded-lg text-fg-muted transition-colors hover:bg-bg-subtle hover:text-fg md:hidden"
               aria-label="Open navigation menu">
@@ -48,7 +51,6 @@
       <li><a href="{{ item.url | relative_url }}" class="block py-3 font-display font-medium text-fg-muted hover:text-accent-text">{{ item.title }}</a></li>
       {%- endfor %}
       <li><a href="{{ site.links.wiki }}" target="_blank" rel="noopener" class="block py-3 font-display font-medium text-fg-muted hover:text-accent-text">Wiki</a></li>
-      <li class="py-3"><a href="{{ '/join.html' | relative_url }}" class="btn btn-primary w-full">Join the club</a></li>
     </ul>
   </div>
 </header>

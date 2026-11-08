@@ -1,48 +1,61 @@
 # FAQ content. Answers may contain inline HTML; they are rendered unescaped.
 # Substance preserved from the original faq.html, copy tightened.
 
-- section: Joining
+- section: Membership
   id: joining
   questions:
-    - q: How do I join?
+    - q: Is membership open to the public?
       a: >-
-        Attend at least two meetings, then apply by submitting a completed
-        stock checklist on a company of your choosing. The partners then vote,
-        and acceptance has to be unanimous. Membership is capped at twenty
-        people. If we are full, or if the club is not the right fit, starting
-        your own is genuinely not difficult and we are happy to answer
-        questions about how.
-    - q: What minimum amount do I have to invest each month?
+        No. Cypress Investment Club is a private club. It does not advertise or
+        solicit membership, it does not accept unsolicited applications, and
+        nothing on this site is an offer to sell or a solicitation of an offer
+        to buy an interest in the club or any security. Investment clubs rely
+        on an exclusion that is available only to a club that makes no public
+        offering of its interests, so this is a constraint the club has to keep
+        to rather than a matter of preference.
+    - q: How does the club admit a new partner?
       a: >-
-        Ten dollars a month. That floor is deliberate: we would rather the club
-        be affordable than exclusive. If you are experiencing hardship, a
-        hardship exception can be arranged.
+        A prospective partner sits in on at least two meetings, then submits a
+        completed stock checklist on a company of their choosing and presents
+        it. The existing partners vote, and acceptance has to be unanimous.
+        Membership is capped at twenty.
+    - q: Why publish any of this if the club is not open?
+      a: >-
+        Because a club that asks its partners to read filings should be willing
+        to have its own paperwork read. The governing documents are public, the
+        procedure is public, and this site is a plainer retelling of both. None
+        of that is an invitation.
+    - q: What minimum amount does a partner contribute each month?
+      a: >-
+        Ten dollars a month, as set by the partnership agreement. The floor is
+        deliberately low, and hardship exceptions can be arranged.
     - q: Are there fees to join or to withdraw funds?
       a: >-
-        No. The club does not charge to join, and it does not charge to
-        withdraw any or all of your funds. If a withdrawal incurs a cost from a
-        vendor, the withdrawing member covers that cost. Keeping expenses down
-        is a standing priority, because every dollar of expense is a dollar not
-        invested.
-    - q: Do members have to belong to BetterInvesting, NAIC, or a similar body?
+        No. The club does not charge to join, and it does not charge a partner
+        to withdraw any or all of their funds. If a withdrawal incurs a cost
+        from a vendor, the withdrawing partner covers that cost. Keeping
+        expenses down is a standing priority, because every dollar of expense
+        is a dollar not invested.
+    - q: Do partners have to belong to BetterInvesting, NAIC, or a similar body?
       a: >-
-        No. We require no third-party memberships. Those subscriptions are an
-        expense, and we would rather commit that money to the portfolio.
-    - q: How experienced are the members?
+        No. The club requires no third-party memberships. Those subscriptions
+        are an expense, and we would rather commit that money to the portfolio.
+    - q: How experienced are the partners?
       a: >-
         The range is wide, and that is the point. We are primarily an
         educational organisation. Nobody here is finished learning, and helping
         each other learn is part of the deal.
-    - q: What does the club expect of new members?
+    - q: What does the club expect of a new partner?
       a: >-
-        Ask questions and complete the onboarding training. Those are the two
-        real obligations in your first few months.
+        Asking questions and completing the onboarding training. Those are the
+        two real obligations in the first few months.
     - q: What time commitment is expected?
       a: >-
         At least two hours a month in the meeting itself, plus time during the
-        month to research new candidates and review the holdings assigned to
-        you. Investing is not an automated process, and the club is not a
-        licensed broker or wealth manager.
+        month to research new candidates and review assigned holdings. Every
+        partner is required to take an active part; a club whose members are
+        passive stops being a club. The club is not a licensed broker or
+        wealth manager, and no partner is paid for advice.
 
 - section: Meetings
   id: meetings
@@ -77,9 +90,9 @@
       a: >-
         We look for growth companies capable of roughly 14.9% compounded annual
         appreciation, which is what doubling in five years requires. There is a
-        standard worksheet that every candidate goes through, and you will be
-        trained on it as a new member. Beyond the worksheet, it comes down to
-        making the argument to the other members.
+        standard worksheet that every candidate goes through, and a new partner is
+        trained on it before being asked to present one. Beyond the worksheet,
+        it comes down to making the argument to the other partners.
     - q: Is background material circulated before a purchase is proposed?
       a: >-
         Yes. The worksheet has to be completed and submitted before the meeting
@@ -134,11 +147,11 @@
     - q: Do members get meeting minutes promptly?
       a: >-
         Documents and minutes go up on the team site in near-real time.
-    - q: Can I see the partnership and operating agreements before deciding?
+    - q: Are the partnership and operating agreements public?
       a: >-
-        You can read
-        <a href="https://github.com/CyIC/documents">all of them right now</a>,
-        before you talk to us at all. They are public.
+        Yes.
+        <a href="https://github.com/CyIC/documents">All of them are published</a>
+        and can be read right now, in full, by anyone.
     - q: Do members get monthly valuations and status reports?
       a: >-
         Yes, delivered to members before each meeting and archived so any
@@ -157,11 +170,14 @@
         K-1s to all partners through our platform.
     - q: Is the club subject to SEC regulation?
       a: >-
-        Investment clubs have
-        <a href="https://www.sec.gov/reportspubs/investor-publications/investor-pubs-invclub">specific rules</a>
-        under SEC guidance. Because of them we are not open to the public as an
-        investment vehicle, and members are required to be genuinely active in
-        evaluating and voting on securities. We are a club, not a fund.
+        The club is organised so that it does not have to register, and
+        <a href="https://www.sec.gov/reportspubs/investor-publications/investor-pubs-invclub">the SEC&rsquo;s own guidance on investment clubs</a>
+        sets out what that depends on. Two things matter most. Every partner
+        has to take a genuine, active part in evaluating and voting on the
+        club&rsquo;s holdings, because a club with passive members may be
+        issuing securities. And the club must make no public offering of its
+        interests, which is why it does not advertise or solicit membership.
+        Both are reasons the club stays small, slow, and closed.
 
 - section: Education
   id: education
@@ -177,8 +193,8 @@
         members want to push it.
     - q: Is there a mentoring programme for new members?
       a: >-
-        We are building one. Today it is informal, which mostly means you can
-        ask anyone anything.
+        We are building one. Today it is informal, which mostly means any partner
+        can ask any other partner anything.
 
 - section: Governance
   id: governance

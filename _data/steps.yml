@@ -1,21 +1,22 @@
-# The membership path, drawn from the bylaws and the FAQ.
+# The admission procedure, drawn from the bylaws and the partnership agreement.
+#
+# Deliberately written in the third person, as a record of how the club admits
+# a partner rather than as an invitation to apply. An investment club relies on
+# the private investment company exclusion under the Investment Company Act,
+# which requires that it make no public offering of its interests, and a public
+# website that solicits members can itself count as one. Keep this descriptive.
 - step: "01"
-  title: Join the conversation
+  title: Two meetings first
   body: >-
-    Say hello in our Discord. Ask anything. There is no cost and no obligation to
-    go further.
+    A prospective partner sits in on at least two meetings before any
+    application, so nobody commits to a club they have not watched work.
 - step: "02"
-  title: Sit in on two meetings
+  title: A stock checklist
   body: >-
-    Prospective members attend at least two meetings before applying, so you
-    see exactly how the club argues and decides.
+    An application is a completed worksheet on one company, researched and
+    presented to the partners. The club trains them on the worksheet first.
 - step: "03"
-  title: Bring a stock checklist
+  title: Unanimous consent
   body: >-
-    Apply by researching one company and presenting it on our standard
-    worksheet. We will train you on it first.
-- step: "04"
-  title: Unanimous vote
-  body: >-
-    The partners vote. Acceptance is unanimous, and membership is capped at
-    twenty so every voice stays audible.
+    The existing partners vote, and acceptance has to be unanimous. Membership
+    is capped at twenty so that every voice stays audible.

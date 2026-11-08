@@ -23,22 +23,27 @@ description: >-
       </h1>
 
       <p class="mt-7 max-w-xl text-lg leading-relaxed text-fg-muted">
-        We are an investment club, not a fund. Members put in as little as
+        A private investment club, not a fund. Partners contribute at least
         {{ site.club.minimum_monthly }} a month, research real companies
-        together, and vote on everything the club buys or sells.
-        Nobody here is a professional. That is rather the point.
+        together, and vote on everything the club buys or sells. Nobody here is
+        a professional. That is rather the point.
       </p>
 
+      <!--
+        The primary action is to understand the club, not to join it. A private
+        investment club cannot publicly offer its interests, and a "join now"
+        button on the front page of a public site is exactly that.
+      -->
       <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-        <a href="{{ '/join.html' | relative_url }}" class="btn btn-primary">
-          How to join {% include icon.html name="arrow-right" class="size-4" %}
+        <a href="#how-it-works" class="btn btn-primary">
+          See how it works {% include icon.html name="arrow-right" class="size-4" %}
         </a>
-        <a href="#how-it-works" class="btn btn-outline">See how it works</a>
+        <a href="{{ '/principles.html' | relative_url }}" class="btn btn-outline">Read the principles</a>
       </div>
 
       <p class="mt-7 text-sm text-fg-faint">
-        Capped at {{ site.club.member_cap }} members &middot;
-        Open to beginners &middot;
+        Capped at {{ site.club.member_cap }} partners &middot;
+        Not open to the public &middot;
         <a class="underline underline-offset-4 hover:text-accent-text" href="{{ site.links.documents }}" target="_blank" rel="noopener">Bylaws are public</a>
       </p>
     </div>
@@ -97,16 +102,16 @@ description: >-
       <div class="lg:col-span-4">
         <p class="eyebrow">Membership</p>
         <h2 class="mt-3 font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
-          How you get in
+          How a partner is admitted
         </h2>
         <p class="mt-5 leading-relaxed text-fg-muted">
-          Deliberately slow. You should know what you are joining, and the
-          partners should know who they are voting in. Expect a couple of
-          months from first hello to first vote.
+          Deliberately slow, and closed to the public. The club does not
+          advertise for partners; this is simply the procedure its own
+          documents set out, and it runs to months rather than days.
         </p>
         <a href="{{ '/join.html' | relative_url }}"
            class="mt-7 inline-flex items-center gap-2 font-display font-medium text-accent-text hover:underline">
-          Read the full process {% include icon.html name="arrow-right" class="size-4" %}
+          What membership involves {% include icon.html name="arrow-right" class="size-4" %}
         </a>
       </div>
 
@@ -168,11 +173,11 @@ description: >-
     <div class="max-w-2xl">
       <p class="eyebrow">Nothing hidden</p>
       <h2 class="mt-3 font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
-        Read the paperwork before you talk to us
+        The paperwork is public
       </h2>
       <p class="mt-5 text-lg leading-relaxed text-fg-muted">
         Our governing documents are on GitHub, in public, for anyone to read.
-        Members get monthly valuations, unit accounting, and minutes in
+        Partners get monthly valuations, unit accounting, and minutes in
         near-real time.
       </p>
     </div>
@@ -198,7 +203,7 @@ description: >-
         </span>
         <h3 class="mt-5 font-display text-lg font-semibold text-fg">Partnership agreement</h3>
         <p class="mt-2 text-sm leading-relaxed text-fg-muted">
-          The operating and partnership agreements, in full, before you decide.
+          The operating and partnership agreements, in full and unedited.
         </p>
       </a>
 

@@ -1,9 +1,15 @@
 # Primary navigation. `external: true` renders the outbound arrow and
 # opens in a new tab.
+#
+# Membership sits here as one section among several, rather than as a
+# call-to-action button, so that the site reads as a record of the club and not
+# as an advertisement for it. See the notice at the top of join.html.
 - title: How it works
   url: /#how-it-works
 - title: Principles
   url: /principles.html
+- title: Membership
+  url: /join.html
 - title: FAQ
   url: /faq.html
 - title: Resources

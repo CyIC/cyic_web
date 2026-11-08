@@ -1,18 +1,49 @@
 ---
 layout: page
-title: Join the club
-eyebrow: Membership
+title: Membership
+eyebrow: For the record
 lede: >-
-  Four steps, a couple of months, and a unanimous vote. Here is exactly what
-  to expect and what it costs.
+  Cypress Investment Club is a private club and does not offer membership to
+  the public. This page is a record of how it admits a partner and what that
+  partner takes on.
 description: >-
-  How to join Cypress Investment Club: attend two meetings, submit a stock
-  checklist, and stand for a unanimous vote. Minimum $10 per month, capped at
-  20 members.
+  How Cypress Investment Club admits a partner, what a partner commits, and why
+  a private investment club is not open to the public.
 ---
 
-<section aria-labelledby="steps">
-  <h2 id="steps" class="font-display text-2xl font-semibold tracking-tight text-fg">The process</h2>
+<!--
+  This page is descriptive, not promotional. The club relies on the private
+  investment company exclusion under the Investment Company Act, which is
+  available only to a club that makes no public offering of its interests, and
+  a website that advertises membership can itself amount to one. Nothing here
+  should read as an offer, an invitation to apply, or a call to action.
+-->
+
+<section aria-labelledby="notice" class="card border-accent/40 bg-accent-soft p-6 sm:p-8">
+  <h2 id="notice" class="font-display text-lg font-semibold tracking-tight text-fg">
+    This is not an offer of membership
+  </h2>
+  <div class="rich mt-4 text-sm">
+    <p>
+      The club does not advertise, solicit, or accept unsolicited applications
+      for membership, and nothing on this site is an offer to sell or a
+      solicitation of an offer to buy an interest in the club or any security.
+      An interest in the club is not transferable, is not registered with any
+      securities regulator, and is not available to the public.
+    </p>
+    <p>
+      The club is published here because its members believe a club should be
+      able to show its workings. Read it as a record of how we operate.
+    </p>
+  </div>
+</section>
+
+<section aria-labelledby="steps" class="mt-16 border-t border-line pt-14">
+  <h2 id="steps" class="font-display text-2xl font-semibold tracking-tight text-fg">How a partner is admitted</h2>
+  <p class="mt-4 max-w-xl leading-relaxed text-fg-muted">
+    Deliberately slow, and deliberately hard to do at a distance. The existing
+    partners have to know who they are voting in.
+  </p>
 
   <ol class="mt-8">
     {%- for step in site.data.steps %}
@@ -33,7 +64,7 @@ description: >-
 
 <section aria-labelledby="commitment" class="mt-16 border-t border-line pt-14">
   <h2 id="commitment" class="font-display text-2xl font-semibold tracking-tight text-fg">
-    What you are committing to
+    What a partner commits
   </h2>
 
   <dl class="mt-8 grid gap-6 sm:grid-cols-2">
@@ -41,8 +72,8 @@ description: >-
       <dt class="font-display text-sm font-medium text-fg-faint">Money</dt>
       <dd class="mt-2 font-display text-2xl font-semibold text-accent-text">{{ site.club.minimum_monthly }} / month minimum</dd>
       <p class="mt-3 text-sm leading-relaxed text-fg-muted">
-        No fee to join and no fee to withdraw your funds. Hardship exceptions
-        are available &mdash; just ask.
+        The club charges nothing to join and nothing to withdraw funds. The
+        floor is low because a club should be affordable rather than exclusive.
       </p>
     </div>
     <div class="card p-6">
@@ -66,8 +97,8 @@ description: >-
       <dt class="font-display text-sm font-medium text-fg-faint">Learning</dt>
       <dd class="mt-2 font-display text-2xl font-semibold text-accent-text">Onboarding training</dd>
       <p class="mt-3 text-sm leading-relaxed text-fg-muted">
-        You will be trained on the stock worksheet before you are asked to
-        present one. Beginners are genuinely welcome.
+        Partners are trained on the stock worksheet before being asked to
+        present one. Experience is not a prerequisite; participation is.
       </p>
     </div>
   </dl>
@@ -78,38 +109,28 @@ description: >-
   <div class="rich mt-6">
     <ul>
       <li>
-        <strong>Not a fund.</strong> You cannot hand us money to manage.
-        Investment clubs operate under
-        <a href="{{ site.links.sec_clubs }}" target="_blank" rel="noopener">specific SEC rules</a>
-        that require members to participate, so we are not open to the public
-        as an investment vehicle.
+        <strong>Not a fund.</strong> Nobody can hand the club money to manage.
+        Every partner is required to take an active part in researching and
+        voting on the club&rsquo;s holdings, which is precisely what keeps a
+        club a club under the
+        <a href="{{ site.links.sec_clubs }}" target="_blank" rel="noopener">SEC&rsquo;s guidance on investment clubs</a>.
       </li>
       <li>
-        <strong>Not a broker or adviser.</strong> Nobody here is licensed, and
-        nothing we publish is investment advice.
+        <strong>Not a broker or adviser.</strong> No partner is licensed, no
+        partner is paid for advice, and nothing published here is investment
+        advice or a recommendation to buy or sell anything.
       </li>
       <li>
-        <strong>Not passive.</strong> If you want to set it and forget it, an
-        index fund will serve you better and we will say so cheerfully.
+        <strong>Not passive.</strong> Anyone who wants to set it and forget it
+        is better served by an index fund, and the club will say so cheerfully.
       </li>
       <li>
-        <strong>Not unlimited.</strong> {{ site.club.member_cap }} members is
-        the cap. If we are full, we will help you start your own club.
+        <strong>Not open.</strong> {{ site.club.member_cap }} partners is the
+        cap, admission is unanimous, and membership is not offered publicly.
+        Starting a club is genuinely not difficult, and the
+        <a href="{{ '/resources.html' | relative_url }}">resources</a> page
+        lists what we used to start this one.
       </li>
     </ul>
-  </div>
-</section>
-
-<section aria-labelledby="start" class="card mt-16 bg-bg-subtle p-8 sm:p-10">
-  <h2 id="start" class="font-display text-2xl font-semibold tracking-tight text-fg">Start with step one</h2>
-  <p class="mt-4 max-w-xl leading-relaxed text-fg-muted">
-    Join the Discord and introduce yourself. There is no cost, no application,
-    and no obligation to take it any further than a conversation.
-  </p>
-  <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-    <a href="{{ site.links.discord }}" target="_blank" rel="noopener" class="btn btn-primary">
-      {% include icon.html name="discord" class="size-5" %} Join us on Discord
-    </a>
-    <a href="{{ '/faq.html#joining' | relative_url }}" class="btn btn-outline">Read the joining FAQ</a>
   </div>
 </section>

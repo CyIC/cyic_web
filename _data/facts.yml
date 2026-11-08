@@ -1,13 +1,18 @@
 # Headline numbers for the home page stat band. Values that also appear in
 # prose are pulled from site.club in _config.yml.
+#
+# These are statements of what the club's own documents set, not inducements.
+# Keep the target framed as the objective it is measured against rather than as
+# a return anyone should expect: this is a public page, and the club does not
+# offer its interests publicly.
 - value: "14.9%"
-  label: Target annual return
-  note: Compounded, to double in five years
+  label: The club's stated objective
+  note: Compounded, which is what doubling in five years takes
 - value: "$10"
-  label: Minimum per month
-  note: Hardship exceptions available
+  label: Minimum monthly contribution
+  note: The floor set by the partnership agreement
 - value: "20"
-  label: Member cap
+  label: Partner cap
   note: Small enough that everyone speaks
 - value: "1"
   label: Vote per active partner
